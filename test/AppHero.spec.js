@@ -6,10 +6,6 @@ describe('AppHero', () => {
     const wrapper = mount(AppHero)
     expect(wrapper.vm).toBeTruthy()
   })
-  test('renders correctly', () => {
-    const wrapper = mount(AppHero)
-    expect(wrapper.html()).toMatchSnapshot()
-  })
   test('renders a name', () => {
     const wrapper = shallowMount(AppHero)
     expect(wrapper.find('h1').text()).toBe('LEIGH DINAYA')

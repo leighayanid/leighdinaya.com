@@ -5,6 +5,7 @@
       autocomplete="off"
       placeholder="Search Notes"
       class="px-3 py-2 rounded-lg text-sm text-slate-800 border-1 border relative w-full"
+      data-username
       @input="debounceSearch"
       @change="search"
     />
