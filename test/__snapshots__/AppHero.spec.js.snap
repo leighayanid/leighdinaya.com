@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppHero renders correctly 1`] = `
+"<div class=\\"
+    flex
+    md:flex-row
+    flex-col-reverse
+    justify-between
+    md:items-center md:my-20
+    my-10
+  \\">
+  <!---->
+  <!---->
+</div>"
+`;
