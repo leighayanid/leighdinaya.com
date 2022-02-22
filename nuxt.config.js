@@ -1,3 +1,5 @@
+import getRoutes from './utils/getRoutes'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -41,6 +43,7 @@ export default {
     '@nuxt/content',
     'nuxt-speedkit',
     '@nuxtjs/color-mode',
+    '@nuxtjs/sitemap',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -73,6 +76,13 @@ export default {
   },
 
   eslint: { cache: false },
+
+  sitemap: {
+    hostname: process.env.BASE_URL,
+    routes() {
+      return getRoutes()
+    },
+  },
 
   colorMode: {
     preference: 'light',

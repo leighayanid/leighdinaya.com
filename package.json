@@ -23,6 +23,7 @@
   "dependencies": {
     "@nuxt/content": "^1.5.3",
     "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/sitemap": "^2.4.0",
     "animate.css": "^4.1.1",
     "core-js": "^3.19.3",
     "debounce": "^1.2.1",
