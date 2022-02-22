@@ -20,15 +20,5 @@ export default {
       resources,
     }
   },
-
-  methods: {
-    // filter notes by ascending/descending order of createdAt
-    async sortBy(order) {
-      this.notes = await this.$content('blogs')
-        .only(['title', 'slug', 'date', 'tags'])
-        .sortBy('date', order)
-        .fetch()
-    },
-  },
 }
 </script>
