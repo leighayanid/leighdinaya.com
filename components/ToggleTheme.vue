@@ -6,7 +6,7 @@
     @click.prevent="toggleTheme"
   >
     <svg
-      v-if="isDark"
+      v-if="$colorMode.preference === 'dark'"
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
