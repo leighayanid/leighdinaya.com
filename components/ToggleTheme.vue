@@ -6,7 +6,7 @@
     @click.prevent="toggleTheme"
   >
     <svg
-      v-if="darkTheme"
+      v-if="isDark"
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
@@ -60,15 +60,16 @@ export default {
       : (this.darkTheme = false)
   },
 
+  watch: {
+    darkTheme(val) {
+      this.$colorMode.preference = val ? 'dark' : 'light'
+      localStorage.setItem('nuxt-color-mode', val ? 'dark' : 'light')
+    },
+  },
+
   methods: {
     toggleTheme() {
-      if (this.darkTheme) {
-        this.$colorMode.preference = 'light'
-        this.darkTheme = false
-      } else {
-        this.$colorMode.preference = 'dark'
-        this.darkTheme = true
-      }
+      this.darkTheme = !this.darkTheme
     },
   },
 }

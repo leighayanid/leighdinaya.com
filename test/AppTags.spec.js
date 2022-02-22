@@ -2,6 +2,11 @@ import { mount } from '@vue/test-utils'
 import AppTags from '@/components/AppTags.vue'
 
 describe('AppTags', () => {
+  test('wrapper exists', () => {
+    const wrapper = mount(AppTags)
+    expect(wrapper.exists()).toBe(true)
+  })
+
   test('renders correct tags', () => {
     const wrapper = mount(AppTags, {
       propsData: {
