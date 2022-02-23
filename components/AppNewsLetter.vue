@@ -46,5 +46,31 @@
 </template>
 
 <script>
-export default {}
+export default {
+  mounted() {
+    const emailForm = document.getElementById('newsletter')
+    emailForm.addEventListener('submit', (e) => {
+      e.preventDefault()
+      this.processForm(emailForm)
+    })
+  },
+  methods: {
+    processForm(form) {
+      const formData = new FormData(form)
+      formData.append('form-name', 'newsletter')
+      fetch('/', {
+        method: 'POST',
+        body: formData,
+      })
+        .then((response) => {
+          if (response.ok) {
+            console.log('success')
+          }
+        })
+        .catch((error) => {
+          console.error(error)
+        })
+    },
+  },
+}
 </script>

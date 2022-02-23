@@ -1,19 +1,16 @@
-import fetch from 'node-fetch'
-
 require('dotenv').config()
+const fetch = require('node-fetch')
 const { BUTTONDOWN_API_KEY } = process.env
-
-exports.handler = async (event) => {
-  const payload = JSON.parse(event.body).payload
-  console.log(`Recieved a submission: ${payload.email}`)
-
-  return await fetch('https://api.buttondown.email/v1/subscribers', {
+exports.handler = (event) => {
+  const email = JSON.parse(event.body).payload.email
+  console.log(`Recieved a submission: ${email}`)
+  return fetch('https://api.buttondown.email/v1/subscribers', {
     method: 'POST',
     headers: {
       Authorization: `Token ${BUTTONDOWN_API_KEY}`,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ email: payload.email, notes: payload.name }),
+    body: JSON.stringify({ email }),
   })
     .then((response) => response.json())
     .then((data) => {
