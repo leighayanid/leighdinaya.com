@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  @apply md:my-10 my-5 md:px-32 lg:px-72 py-4 px-4 md:max-w-full xl:max-w-screen-xl mx-auto;
+  @apply md:my-10 my-5 md:px-32 lg:px-72 py-4 px-8 md:max-w-full xl:max-w-screen-xl mx-auto;
 }
 
 .nuxt-content-highlight {
