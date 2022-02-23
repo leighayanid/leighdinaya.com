@@ -56,11 +56,12 @@ export default {
   },
   methods: {
     async onSubmit(form) {
-      const formData = new FormData(form)
       try {
         const res = await fetch('/.netlify/functions/buttondown', {
           method: 'POST',
-          body: formData,
+          body: {
+            email: form.email,
+          },
           headers: {
             'Content-Type': 'application/json',
           },
