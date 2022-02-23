@@ -11,13 +11,11 @@
       <div class="flex-1 mt-5">
         <client-only>
           <form
-            ref="newsletter"
+            id="newsletter"
             class="email-form flex"
             name="newsletter"
             data-netlify="true"
             netlify-honeypot="bot-field"
-            id="newsletter"
-            @submit.prevent="onSubmit"
           >
             <div hidden aria-hidden="true">
               <label>
@@ -28,7 +26,6 @@
             <div class="flex">
               <input
                 id="email"
-                v-model="email"
                 type="email"
                 name="email"
                 placeholder="Email"
@@ -50,30 +47,5 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      email: '',
-      subscribed: false,
-    }
-  },
-  methods: {
-    onSubmit() {
-      const formdata = new FormData(this.$refs.newsletter)
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formdata).toString(),
-      })
-        .then(() => {
-          this.email = ''
-          this.subscribed = true
-          alert('Subscribed!')
-        })
-        .catch((e) => {
-          alert('Something went wrong')
-        })
-    },
-  },
-}
+export default {}
 </script>
