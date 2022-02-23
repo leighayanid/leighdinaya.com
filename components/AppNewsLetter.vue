@@ -14,6 +14,7 @@
             id="newsletter"
             class="email-form flex"
             name="newsletter"
+            method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
           >
