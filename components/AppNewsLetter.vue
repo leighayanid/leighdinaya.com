@@ -14,8 +14,7 @@
           class="email-form flex"
           name="newsletter"
           method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
+          @submit.prevent="processForm"
         >
           <div hidden aria-hidden="true">
             <label>
@@ -47,15 +46,9 @@
 
 <script>
 export default {
-  mounted() {
-    const emailForm = document.getElementById('newsletter')
-    emailForm.addEventListener('submit', (e) => {
-      e.preventDefault()
-      this.processForm(emailForm)
-    })
-  },
   methods: {
-    processForm(form) {
+    processForm() {
+      const form = document.getElementById('newsletter')
       const formData = new FormData(form)
       formData.append('form-name', 'newsletter')
       fetch('/', {
