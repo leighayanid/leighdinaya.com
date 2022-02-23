@@ -10,8 +10,8 @@
       </div>
       <div class="flex-1 mt-5">
         <form
-          ref="form"
           id="newsletter"
+          ref="form"
           class="email-form flex"
           name="newsletter"
           @submit.prevent="onSubmit(form)"
@@ -60,7 +60,7 @@ export default {
         const res = await fetch('/.netlify/functions/buttondown', {
           method: 'POST',
           body: {
-            email: this.form.email,
+            email: form.body.email,
           },
           headers: {
             'Content-Type': 'application/json',

@@ -7,12 +7,12 @@
         <nuxt-link to="/blog">Blog</nuxt-link>
         <nuxt-link to="/about">About</nuxt-link>
       </div>
-      <div class="social flex flex-col space-y-3">
+      <div class="social flex flex-col md:mt-0 mt-3 space-y-3">
         <a href="https://twitter.com/leighrd_">Twitter</a>
         <a href="https://github.com/leighayanid">Github</a>
         <a href="https://youtube.com">Youtube</a>
       </div>
-      <div class="social flex flex-col space-y-2">
+      <div class="social flex flex-col md:mt-0 mt-3 space-y-2">
         <h1 class="font-semibold">Say Hi!</h1>
         <p>leighdinaya@protonmail.com</p>
         <p>+639266781390</p>
