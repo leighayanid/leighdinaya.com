@@ -64,11 +64,15 @@ export default {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formdata).toString(),
-      }).then(() => {
-        this.email = ''
-        this.subscribed = true
-        alert('Subscribed!')
       })
+        .then(() => {
+          this.email = ''
+          this.subscribed = true
+          alert('Subscribed!')
+        })
+        .catch((e) => {
+          alert('Something went wrong')
+        })
     },
   },
 }
