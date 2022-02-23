@@ -22,30 +22,9 @@ export default {
   async asyncData({ store }) {
     await store.dispatch('project/fetchProjects')
 
-    const tags = await store.state.project.projects.reduce((tags, note) => {
-      note.tags.forEach((tag) => {
-        if (!tags.includes(tag)) {
-          tags.push(tag)
-        }
-      })
-
-      return tags
-    }, [])
-
     return {
       projects: store.getters['project/projects'],
-      tags,
     }
-  },
-
-  methods: {
-    // filter notes by ascending/descending order of createdAt
-    async sortBy(order) {
-      this.notes = await this.$content('blogs')
-        .only(['title', 'slug', 'date', 'tags'])
-        .sortBy('date', order)
-        .fetch()
-    },
   },
 }
 </script>

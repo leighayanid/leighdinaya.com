@@ -18,25 +18,17 @@
         tag="project"
         class="prose dark:text-slate-50 dark:prose-headings:text-slate-50"
       ></nuxt-content>
-
-      <prev-next :prev="prev" :next="next" class="my-5" />
     </article>
   </div>
 </template>
 
 <script>
+import { formatDate } from '@/utils/formatDate'
 export default {
   name: 'ProjectSlug',
 
   async asyncData({ $content, store, params }) {
     await store.dispatch('project/fetchProject', params.slug)
-
-    const [prev, next] = await $content('projects')
-      .only(['title', 'slug'])
-      .sortBy('createdAt', 'asc')
-      .surround(params.slug)
-      .fetch()
-    return { project: await store.getters['project/project'], prev, next }
   },
 
   head() {
@@ -72,10 +64,7 @@ export default {
   },
 
   methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(date).toLocaleDateString('en', options)
-    },
+    formatDate,
   },
 }
 </script>
