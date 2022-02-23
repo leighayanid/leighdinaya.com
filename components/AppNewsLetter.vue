@@ -11,11 +11,12 @@
       <div class="flex-1 mt-5">
         <client-only>
           <form
+            ref="newsletter"
             class="email-form flex"
             name="newsletter"
             data-netlify="true"
             netlify-honeypot="bot-field"
-            action=""
+            id="newsletter"
             @submit.prevent="onSubmit"
           >
             <div hidden aria-hidden="true">
@@ -58,7 +59,7 @@ export default {
   },
   methods: {
     onSubmit() {
-      const formdata = new FormData(this.email)
+      const formdata = new FormData(this.$refs.newsletter)
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -66,7 +67,7 @@ export default {
       }).then(() => {
         this.email = ''
         this.subscribed = true
-        console.log('Subscribed!')
+        alert('Subscribed!')
       })
     },
   },
