@@ -29,8 +29,9 @@
             <button
               type="submit"
               class="bg-slate-800 text-slate-100 ml-4 p-2 rounded-lg"
+              :disabled="loading"
             >
-              Subscribe
+              {{ loading ? 'Please wait..' : 'Subscribe' }}
             </button>
           </div>
         </form>
@@ -48,10 +49,12 @@ export default {
         email: '',
       },
       message: '',
+      loading: false,
     }
   },
   methods: {
     async onSubmit(form) {
+      this.loading = true
       try {
         await fetch('/.netlify/functions/buttondown', {
           method: 'POST',
@@ -62,14 +65,17 @@ export default {
         })
           .then((res) => res.json())
           .then((res) => {
-            if (res.status === 'success') {
-              this.message = 'Thanks for signing up!'
-            } else {
-              this.message = 'Something went wrong'
-            }
+            // check if response is success
+
+            this.message =
+              res.status === 200
+                ? 'Thanks for subscribing!'
+                : 'There was an error!'
+            this.form.email = ''
+            this.loading = false
           })
       } catch (e) {
-        console.log(e)
+        this.loading = false
       }
     },
   },
