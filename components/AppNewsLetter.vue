@@ -5,7 +5,7 @@
         <h2 class="text-xl font-bold">Sign up for our newsletter</h2>
         <p class="">
           Get emails from me about web development, tech, and early access to
-          new articles.
+          new articles. I also share pictures of my dogs.
         </p>
       </div>
       <div class="flex-1 mt-5">
@@ -13,9 +13,10 @@
           <form
             class="email-form flex"
             name="newsletter"
-            method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
+            action=""
+            @submit.prevent="onSubmit"
           >
             <div hidden aria-hidden="true">
               <label>
@@ -26,6 +27,7 @@
             <div class="flex">
               <input
                 id="email"
+                v-model="email"
                 type="email"
                 name="email"
                 placeholder="Email"
@@ -47,5 +49,25 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      email: '',
+      subscribed: false,
+    }
+  },
+  methods: {
+    onSubmit() {
+      const formdata = new FormData(this.email)
+      fetch('/', {
+        method: 'POST',
+        body: new URLSearchParams(formdata).toString(),
+      }).then(() => {
+        this.email = ''
+        this.subscribed = true
+        console.log('Subscribed!')
+      })
+    },
+  },
+}
 </script>

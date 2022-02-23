@@ -54,17 +54,17 @@ export default {
     }
   },
 
-  mounted() {
-    localStorage.getItem('nuxt-color-mode') === 'dark'
-      ? (this.darkTheme = true)
-      : (this.darkTheme = false)
-  },
-
   watch: {
     darkTheme(val) {
       this.$colorMode.preference = val ? 'dark' : 'light'
       localStorage.setItem('nuxt-color-mode', val ? 'dark' : 'light')
     },
+  },
+
+  mounted() {
+    localStorage.getItem('nuxt-color-mode') === 'dark'
+      ? (this.darkTheme = true)
+      : (this.darkTheme = false)
   },
 
   methods: {
