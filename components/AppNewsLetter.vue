@@ -10,11 +10,11 @@
       </div>
       <div class="flex-1 mt-5">
         <form
+          ref="form"
           id="newsletter"
           class="email-form flex"
           name="newsletter"
-          method="POST"
-          @submit.prevent="processForm"
+          @submit.prevent="onSubmit(form)"
         >
           <div hidden aria-hidden="true">
             <label>
@@ -25,6 +25,7 @@
           <div class="flex">
             <input
               id="email"
+              v-model="form.email"
               type="email"
               name="email"
               placeholder="Email"
@@ -46,23 +47,28 @@
 
 <script>
 export default {
+  data() {
+    return {
+      form: {
+        email: '',
+      },
+    }
+  },
   methods: {
-    processForm() {
-      const form = document.getElementById('newsletter')
-      const formData = new FormData(form)
-      formData.append('form-name', 'newsletter')
-      fetch('/', {
-        method: 'POST',
-        body: formData,
-      })
-        .then((response) => {
-          if (response.ok) {
-            console.log('success')
-          }
-        })
-        .catch((error) => {
-          console.error(error)
-        })
+    async onsubmit(form) {
+      try {
+        const res = await fetch('/.netlify/functions/buttondown', {
+          method: 'POST',
+          body: JSON.stringify(form),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }).then((res) => res.json())
+        console.log(res)
+        this.email = ''
+      } catch (e) {
+        console.log(e)
+      }
     },
   },
 }
