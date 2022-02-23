@@ -59,7 +59,9 @@ export default {
       try {
         const res = await fetch('/.netlify/functions/buttondown', {
           method: 'POST',
-          body: JSON.stringify(form),
+          body: {
+            email: this.form.email,
+          },
           headers: {
             'Content-Type': 'application/json',
           },
