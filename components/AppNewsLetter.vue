@@ -16,12 +16,6 @@
           name="newsletter"
           @submit.prevent="onSubmit(form)"
         >
-          <div hidden aria-hidden="true">
-            <label>
-              Don’t fill this out if you're human:
-              <input name="bot-field" />
-            </label>
-          </div>
           <div class="flex">
             <input
               id="email"
@@ -40,6 +34,7 @@
             </button>
           </div>
         </form>
+        <h1 class="my-4 text-lg" v-if="message">{{ message }}</h1>
       </div>
     </div>
   </div>
@@ -52,22 +47,27 @@ export default {
       form: {
         email: '',
       },
+      message: '',
     }
   },
   methods: {
     async onSubmit(form) {
       try {
-        const res = await fetch('/.netlify/functions/buttondown', {
+        await fetch('/.netlify/functions/buttondown', {
           method: 'POST',
-          body: {
-            email: form.email,
-          },
+          body: JSON.stringify(form),
           headers: {
             'Content-Type': 'application/json',
           },
-        }).then((res) => res.json())
-        console.log(res)
-        this.email = ''
+        })
+          .then((res) => res.json())
+          .then((res) => {
+            if (res.status === 'success') {
+              this.message = 'Thanks for signing up!'
+            } else {
+              this.message = 'Something went wrong'
+            }
+          })
       } catch (e) {
         console.log(e)
       }
