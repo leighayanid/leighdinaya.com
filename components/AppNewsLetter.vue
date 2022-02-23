@@ -55,7 +55,7 @@ export default {
     }
   },
   methods: {
-    async onsubmit(form) {
+    async onSubmit(form) {
       try {
         const res = await fetch('/.netlify/functions/buttondown', {
           method: 'POST',
