@@ -44,7 +44,7 @@
       </div>
     </section>
 
-    <lazy-app-news-letter class="my-10" />
+    <app-news-letter class="my-10" />
   </div>
 </template>
 
