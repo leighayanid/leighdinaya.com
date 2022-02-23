@@ -60,7 +60,7 @@ export default {
         const res = await fetch('/.netlify/functions/buttondown', {
           method: 'POST',
           body: {
-            email: form.body.email,
+            email: form.email,
           },
           headers: {
             'Content-Type': 'application/json',
