@@ -10,7 +10,7 @@ exports.handler = (event) => {
       Authorization: `Token ${BUTTONDOWN_API_KEY}`,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ email }),
+    body: email,
   })
     .then((response) => response.json())
     .then((data) => {
