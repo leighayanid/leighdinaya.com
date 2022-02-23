@@ -3,7 +3,7 @@
     <div class="flex flex-col">
       <div class="flex-1">
         <h2 class="text-xl font-bold">Sign up for our newsletter</h2>
-        <p class="">
+        <p class="text-sm">
           Get emails from me about web development, tech, and early access to
           new articles. I also share pictures of my dogs.
         </p>
@@ -35,7 +35,14 @@
             </button>
           </div>
         </form>
-        <h1 class="my-4 text-lg" v-if="message">{{ message }}</h1>
+        <div
+          class="my-4 border border-green-500 w-1/2 rounded-sm"
+          v-if="message"
+        >
+          <p class="text-sm text-green-500 p-2">
+            {{ message }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -65,12 +72,7 @@ export default {
         })
           .then((res) => res.json())
           .then((res) => {
-            // check if response is success
-
-            this.message =
-              res.status === 200
-                ? 'Thanks for subscribing!'
-                : 'There was an error!'
+            this.message = res.msg
             this.form.email = ''
             this.loading = false
           })

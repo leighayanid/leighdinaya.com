@@ -19,7 +19,7 @@
       </div>
     </div>
     <div>
-      <p class="text-center text-gray-500">&copy; 2020 Leigh R.</p>
+      <p class="text-center">&copy; 2020 Leigh R.</p>
     </div>
   </footer>
 </template>
