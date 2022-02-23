@@ -61,6 +61,7 @@ export default {
       const formdata = new FormData(this.email)
       fetch('/', {
         method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formdata).toString(),
       }).then(() => {
         this.email = ''
