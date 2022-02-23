@@ -29,6 +29,9 @@ export default {
 
   async asyncData({ $content, store, params }) {
     await store.dispatch('project/fetchProject', params.slug)
+    return {
+      project: store.getters['project/project'],
+    }
   },
 
   head() {

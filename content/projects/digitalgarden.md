@@ -9,5 +9,5 @@ tags:
   - nuxt
   - tailwindcss
   - firebase
-project_url: https://supaworkk.vercel.app
+project_url: https://lrdgarden.netlify.app
 ---

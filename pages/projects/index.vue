@@ -9,11 +9,6 @@
         class="flex-1 grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-3"
       />
     </div>
-    <div class="flex justify-between items-center">
-      <nuxt-link to="/blog" class="text-lg my-5 underline"
-        >All Projects &#x2192;</nuxt-link
-      >
-    </div>
   </section>
 </template>
 
