@@ -2,7 +2,6 @@
 title: Sharing my Go-to Podcasts
 date: 2020-10-30
 published: true
-featured: true
 tags: ['Learning']
 series: false
 cover_image: ./images/podcast-cover.jpeg
