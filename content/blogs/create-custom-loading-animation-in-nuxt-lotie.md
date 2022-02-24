@@ -2,6 +2,7 @@
 title: Create a custom loading animation component in Nuxt.js with Lottie
 date: 2020-10-23
 published: true
+featured: true
 tags: ['Nuxt']
 series: false
 cover_image: ./images/loading-cover.jpg

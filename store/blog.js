@@ -1,6 +1,7 @@
 export const state = () => ({
   posts: [],
   post: {},
+  featuredPosts: [],
   searchPosts: [],
   tagPosts: [],
 })
@@ -11,6 +12,9 @@ export const mutations = {
   },
   SET_POST(state, post) {
     state.post = post
+  },
+  SET_FEATURED_POSTS(state, posts) {
+    state.featuredPosts = posts
   },
   SET_SEARCH_POSTS(state, posts) {
     state.searchPosts = posts
@@ -32,6 +36,15 @@ export const actions = {
   async fetchPost({ commit }, slug) {
     const post = await this.$content('blogs', slug).fetch()
     commit('SET_POST', post)
+  },
+
+  async fetchFeaturedPosts({ commit }) {
+    const posts = await this.$content('blogs')
+      .where({ featured: { $eq: true } })
+      .only(['title', 'slug', 'date'])
+      .sortBy('date', 'desc')
+      .fetch()
+    commit('SET_FEATURED_POSTS', posts)
   },
 
   async searchPosts({ commit }, { query }) {
@@ -60,6 +73,6 @@ export const getters = {
     return state.post
   },
   featuredPosts(state) {
-    return state.posts.slice(0, 4)
+    return state.featuredPosts
   },
 }

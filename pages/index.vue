@@ -56,7 +56,7 @@ export default {
   },
   async asyncData({ store }) {
     await Promise.all([
-      store.dispatch('blog/fetchPosts'),
+      store.dispatch('blog/fetchFeaturedPosts'),
       store.dispatch('project/fetchFeaturedProjects'),
     ])
     return {

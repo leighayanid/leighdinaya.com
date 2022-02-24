@@ -2,6 +2,8 @@
 title: Build a multi-theme website using Nuxt.js, TailwindCSS and DaisyUI
 date: 2021-10-20
 published: true
+featured: true
+
 tags: ['nuxtjs', 'tailwindcss']
 series: false
 cover_image: ./images/multi-theme-cover.jpg

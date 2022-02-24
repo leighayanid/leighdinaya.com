@@ -2,6 +2,7 @@
 title: Track your website with Umami
 date: 2021-02-20
 published: true
+featured: true
 tags: ['analytics']
 series: false
 cover_image: ./images/analytics-cover.jpg

@@ -2,6 +2,7 @@
 title: Deploy Plenti site on Netlify
 date: 2020-11-07
 published: true
+featured: true
 tags: ['Plenti']
 series: false
 cover_image: ./images/plenti-cover.jpg
