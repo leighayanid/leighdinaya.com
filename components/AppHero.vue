@@ -58,13 +58,14 @@
       </div>
     </lazy-hydrate>
 
-    <lazy-hydrate when-idle>
+    <lazy-hydrate when-visible>
       <img
         src="./../static/images/profile.jpeg"
         alt="profile"
         class="md:h-32 md:w-32 h-20 w-20 md:mb-0 mb-2 rounded-full border-5 border-slate-300 filter grayscale"
         width="100px"
         height="100px"
+        loading="lazy"
       />
     </lazy-hydrate>
   </div>

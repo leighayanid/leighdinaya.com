@@ -36,8 +36,8 @@
           </div>
         </form>
         <div
-          class="my-4 border border-green-500 w-1/2 rounded-sm"
           v-if="message"
+          class="my-4 border border-green-500 w-1/2 rounded-sm"
         >
           <p class="text-sm text-green-500 p-2">
             {{ message }}
