@@ -7,7 +7,7 @@
             <h2 class="font-inter md:text-2xl text-xl font-bold">
               {{ blog.title }}
             </h2>
-            <p class="font-thin text-sm">{{ formatDate(blog.date) }}</p>
+            <p class="text-sm">{{ formatDate(blog.date) }}</p>
           </div>
         </NuxtLink>
       </base-card>

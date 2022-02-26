@@ -1,5 +1,7 @@
 <template>
-  <footer class="py-8 bg-slate-100 dark:bg-zinc-800 flex flex-col space-y-4">
+  <footer
+    class="py-8 bg-slate-100 dark:bg-zinc-800 flex flex-col space-y-4 text-base"
+  >
     <div class="container flex md:flex-row flex-col justify-between">
       <div class="links flex flex-col space-y-3">
         <nuxt-link to="/">Home</nuxt-link>

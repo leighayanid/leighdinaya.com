@@ -11,7 +11,7 @@
             <h2 class="font-inter md:text-2xl text-xl font-bold">
               {{ project.title }}
             </h2>
-            <p class="font-thin text-sm">
+            <p class="text-sm">
               {{ project.description }}
             </p>
           </div>
