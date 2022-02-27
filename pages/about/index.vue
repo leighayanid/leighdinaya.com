@@ -1,6 +1,8 @@
 <template>
   <div class="about space-y-5">
-    <h3 class="text-xl font-semibold">About Me</h3>
+    <h1 class="text-xl font-semibold dark:text-white text-slate-900">
+      About Me
+    </h1>
     <h2>
       I'm Leigh Dinaya. I'm a programmer based in the Philippines. I build
       websites and applications and I've been coding since 2011.

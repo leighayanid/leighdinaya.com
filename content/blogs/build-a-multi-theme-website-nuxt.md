@@ -6,7 +6,7 @@ featured: true
 
 tags: ['nuxtjs', 'tailwindcss']
 series: false
-cover_image: ./images/multi-theme-cover.jpg
+cover_image: multi-theme-cover.jpg
 unsplash_author: Tim Arterbury
 unsplash_link: https://unsplash.com/photos/VkwRmha1_tI
 logo_image: ./images/daisy-logo.png

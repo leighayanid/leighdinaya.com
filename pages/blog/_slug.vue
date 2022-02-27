@@ -9,13 +9,6 @@
         <h3 class="text-gray-500">
           Article last updated: {{ formatDate(blog.updatedAt) }}
         </h3>
-
-        <nuxt-img
-          v-if="blog.img"
-          :src="`/images/${blog.img}`"
-          :alt="blog.alt"
-          class="rounded-lg my-5"
-        />
       </div>
 
       <table-of-content v-if="blog.toc" :toc="blog.toc" class="my-5" />

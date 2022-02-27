@@ -1,12 +1,12 @@
 <template>
   <div
     v-show="$store.state.toggle.toggle"
-    class="w-full h-screen dark:bg-zinc-800 bg-slate-100 z-auto rounded-b-lg py-10 px-4 shadow-md transition-opacity"
+    class="w-full h-screen dark:bg-zinc-800 bg-slate-100 z-auto rounded-b-lg py-10 px-8 shadow-md transition-opacity"
   >
     <base-transition>
-      <app-logo v-if="$store.state.toggle.toggle" />
+      <lazy-app-logo v-if="$store.state.toggle.toggle" class="px-4" />
     </base-transition>
-    <hr class="mb-10" />
+    <hr class="mt-10 my-5" />
     <div class="text-xl" @click="close">
       <base-transition-group class="flex flex-col">
         <nuxt-link v-if="$store.state.toggle.toggle" key="1" to="/blog"
