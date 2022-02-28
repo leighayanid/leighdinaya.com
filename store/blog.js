@@ -41,6 +41,7 @@ export const actions = {
   async fetchFeaturedPosts({ commit }) {
     const posts = await this.$content('blogs')
       .where({ featured: { $eq: true } })
+      .limit(3)
       .only(['title', 'slug', 'date'])
       .sortBy('date', 'desc')
       .fetch()
