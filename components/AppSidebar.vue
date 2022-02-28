@@ -1,7 +1,7 @@
 <template>
   <div
     v-show="$store.state.toggle.toggle"
-    class="w-full h-screen dark:bg-zinc-800 bg-slate-100 z-auto rounded-b-lg py-10 px-8 shadow-md transition-opacity"
+    class="w-full h-screen dark:bg-zinc-800 bg-slate-100 rounded-b-lg py-10 px-8 shadow-md transition-opacity z-50"
   >
     <hr class="mt-10 my-5" />
     <div class="text-xl" @click="close">

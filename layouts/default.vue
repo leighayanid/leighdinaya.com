@@ -1,6 +1,6 @@
 <template>
   <div>
-    <lazy-app-sidebar class="absolute top-0 left-0 z-50" />
+    <lazy-app-sidebar class="absolute top-0 left-0" />
     <lazy-app-navbar />
     <div class="container">
       <Nuxt keep-alive />

@@ -74,6 +74,7 @@ export default {
 
   content: {
     markdown: {
+      remarkPlugins: ['remark-codesandbox'],
       prism: {
         theme: 'prism-themes/themes/prism-material-oceanic.css',
       },
