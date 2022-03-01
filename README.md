@@ -1,11 +1,16 @@
 # website
 
-They say third time's a charm, so here we go.
+A complete rewrite of my portfolio website for the 3rd time. Third time's a charm for me 😆
 
-A complete rewrite of my portfolio website for the 3rd time.
-Built with Nuxt.js, Nuxt Content and hosted on Netlify.
+Fully responsive and production-ready. Built with Nuxt.js, Nuxt Content and hosted on Netlify.
 
-Modern design with dark mode support thanks to Tailwind CSS.
+Clean and simple styling with Tailwind CSS.
+
+### light mode 🌞
+
+![Image](https://res.cloudinary.com/rentapp/image/upload/v1646086701/Leigh_Dinaya_-_Web_developer_aewiyq.png)
+
+### dark mode 🌑
 
 ![Image](https://res.cloudinary.com/rentapp/image/upload/v1645569767/Leigh_Dinaya_-_Web_developer_dzz31m.png)
 
