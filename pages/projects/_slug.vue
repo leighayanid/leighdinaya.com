@@ -1,9 +1,13 @@
 <template>
   <div class="h-auto">
-    <base-back-button />
+    <div>
+      <base-back-button />
+    </div>
     <article class="my-5">
       <div class="mx-auto">
-        <h1 class="text-xl font-extrabold mt-5">{{ project.title }}</h1>
+        <h1 class="md:text-3xl text-2xl font-extrabold mt-5">
+          {{ project.title }}
+        </h1>
 
         <p class="italic">{{ project.description }}</p>
 
