@@ -1,5 +1,6 @@
 <template>
   <div class="h-auto">
+    <base-back-button />
     <article class="my-5">
       <div class="mx-auto">
         <h1 class="text-xl font-extrabold mt-5">{{ project.title }}</h1>
@@ -16,7 +17,7 @@
       <nuxt-content
         :document="project"
         tag="project"
-        class="prose dark:text-slate-50 dark:prose-headings:text-slate-50"
+        class="prose dark:text-slate-50 dark:prose-headings:text-slate-50 dark:prose-a:text-slate-50 dark:prose-code:text-slate-50 dark:prose-inline-code:text-slate-50"
       ></nuxt-content>
     </article>
   </div>

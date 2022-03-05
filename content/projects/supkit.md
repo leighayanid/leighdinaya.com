@@ -51,5 +51,3 @@ project_url: https://supaworkk.vercel.app
 - [yup](https://github.com/jquense/yup) - object schema validation
 - [Vitest](https://vitest.dev) - Vue 3 testing framework powered by Vite
 - [supabase-js]('https://github.com/supabase/supabase-js') - Supabase JS Client
-
-## Try it now

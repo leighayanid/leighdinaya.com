@@ -4,7 +4,9 @@
   >
     <lazy-hydrate when-visible>
       <div>
-        <h1 class="mb-2 font-extrabold md:text-5xl text-3xl font-inter">
+        <h1
+          class="mb-2 font-extrabold md:text-5xl text-3xl font-inter tracking-wide"
+        >
           LEIGH DINAYA
         </h1>
         <h2 class="font-inter mb-2">
@@ -62,7 +64,7 @@
       <img
         src="./../static/images/profile.jpeg"
         alt="profile"
-        class="md:h-32 md:w-32 h-18 w-18 md:mb-0 mb-2 rounded-full grayscale p-1"
+        class="md:h-28 md:w-28 h-18 w-18 md:mb-0 mb-2 rounded-full grayscale p-1"
         width="100px"
         height="100px"
         loading="lazy"
