@@ -22,10 +22,6 @@ body {
   @apply dark:text-slate-500 text-slate-800 hover:text-blue-600;
 }
 
-h1 {
-  @apply text-lg font-bold;
-}
-
 p {
   @apply text-gray-700 dark:text-slate-100;
 }

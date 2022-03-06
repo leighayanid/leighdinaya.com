@@ -1,7 +1,7 @@
 <template>
   <div class="h-auto">
     <article class="my-5">
-      <div class="mx-auto">
+      <div class="mx-auto mb-10">
         <h1 class="md:text-3xl text-2xl font-extrabold mt-5">
           {{ blog.title }}
         </h1>
@@ -13,7 +13,7 @@
         </h3>
       </div>
 
-      <table-of-content v-if="blog.toc" :toc="blog.toc" class="my-5" />
+      <table-of-content v-if="blog.toc.length" :toc="blog.toc" class="my-5" />
 
       <nuxt-content
         :document="blog"
