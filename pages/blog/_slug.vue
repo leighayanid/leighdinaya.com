@@ -2,7 +2,9 @@
   <div class="h-auto">
     <article class="my-5">
       <div class="mx-auto">
-        <h1 class="text-3xl font-extrabold mt-5">{{ blog.title }}</h1>
+        <h1 class="md:text-3xl text-2xl font-extrabold mt-5">
+          {{ blog.title }}
+        </h1>
 
         <h2 class="italic">{{ blog.description }}</h2>
 
