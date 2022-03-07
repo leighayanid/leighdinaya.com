@@ -1,6 +1,5 @@
 <template>
   <div>
-    <base-gradient-background class="relative" />
     <lazy-app-hero />
 
     <section class="blog">
