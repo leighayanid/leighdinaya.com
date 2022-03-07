@@ -34,6 +34,7 @@ export default {
     '@nuxtjs/stylelint-module',
     '@nuxt/postcss8',
     '@nuxt/image',
+    '@nuxtjs/tailwindcss',
   ],
   webfontloader: {
     google: {

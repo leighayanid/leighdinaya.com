@@ -1,5 +1,6 @@
 <template>
   <div>
+    <base-gradient-background class="relative" />
     <lazy-app-hero />
 
     <section class="blog">
@@ -51,9 +52,11 @@
 
 <script>
 import LazyHydrate from 'vue-lazy-hydration'
+import BaseGradientBackground from '~/components/base/BaseGradientBackground.vue'
 export default {
   components: {
     LazyHydrate,
+    BaseGradientBackground,
   },
   async asyncData({ store }) {
     await Promise.all([
