@@ -12,7 +12,7 @@
         <h2 class="font-inter mb-2">
           Web developer. Web3 enthusiast. OSS advocate.
         </h2>
-        <div class="flex space-x-4">
+        <div class="flex space-x-4 z-50">
           <a
             class=""
             href="https://twitter.com/leighrd_"

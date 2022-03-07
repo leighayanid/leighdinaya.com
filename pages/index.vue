@@ -1,6 +1,8 @@
 <template>
   <div>
+    <base-gradient-background class="relative" />
     <lazy-app-hero />
+
     <section class="blog">
       <div class="flex justify-between items-center">
         <transition
