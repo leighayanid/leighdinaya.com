@@ -64,7 +64,7 @@
       <img
         src="./../static/images/profile.jpeg"
         alt="profile"
-        class="md:h-28 md:w-28 h-18 w-18 md:mb-0 mb-2 rounded-full grayscale p-1"
+        class="md:h-28 md:w-28 h-18 w-18 md:mb-0 mb-2 rounded-full filter grayscale p-1"
         width="100px"
         height="100px"
         loading="lazy"
