@@ -1,5 +1,4 @@
 module.exports = {
-  rge: ['./public/**/*.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
   content: [
     './components/**/*.{js,vue,ts}',
     './layouts/**/*.vue',
