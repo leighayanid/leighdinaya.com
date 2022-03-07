@@ -83,7 +83,7 @@ export default {
   eslint: { cache: false },
 
   sitemap: {
-    hostname: process.env.BASE_URL,
+    hostname: process.env.BASE_URL || 'https://testwebsite3leigh.netlify.app',
     routes() {
       return getRoutes()
     },
