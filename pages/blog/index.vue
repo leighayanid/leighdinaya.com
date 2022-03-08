@@ -24,7 +24,7 @@
     <div class="my-2">
       <app-list-blog
         :blogs="blogs"
-        class="flex-1 grid md:grid-cols-2 grid-cols-1 md:gap-6 gap-3"
+        class="flex-1 grid grid-cols-1 md:gap-6 gap-3"
       />
     </div>
   </section>
