@@ -18,16 +18,15 @@
         <nuxt-link v-if="$store.state.toggle.toggle" key="4" to="/about"
           >About</nuxt-link
         >
-        <hr />
         <a
           v-if="$store.state.toggle.toggle"
-          key="3"
+          key="5"
           href="https://github.com/leighayanid"
           >Github</a
         >
         <a
           v-if="$store.state.toggle.toggle"
-          key="4"
+          key="6"
           href="https://twitter.com/structdev"
           >Twitter</a
         >

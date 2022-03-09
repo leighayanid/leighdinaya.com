@@ -18,7 +18,7 @@
       <nuxt-content
         :document="blog"
         tag="blog"
-        class="prose dark:text-slate-50 dark:prose-headings:text-slate-50"
+        class="prose dark:prose-invert prose-headings:text-purple-500 prose:space-y-5"
       ></nuxt-content>
 
       <prev-next :prev="prev" :next="next" class="my-5" />
