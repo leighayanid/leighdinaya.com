@@ -15,11 +15,14 @@
 
       <table-of-content v-if="blog.toc.length" :toc="blog.toc" class="my-5" />
 
-      <nuxt-content
-        :document="blog"
-        tag="blog"
-        class="prose dark:prose-invert prose-headings:text-purple-500 prose:space-y-5"
-      ></nuxt-content>
+      <div class="relative">
+        <nuxt-content
+          :document="blog"
+          tag="blog"
+          class="prose dark:prose-invert prose-headings:text-purple-500 prose:space-y-5 relative"
+        ></nuxt-content>
+        <scroll-to-top v-if="showScrollTop" />
+      </div>
 
       <prev-next :prev="prev" :next="next" class="my-5" />
     </article>
@@ -32,6 +35,7 @@
 
 <script>
 import { formatDate } from '@/utils/formatDate'
+
 export default {
   name: 'Blogslug',
 
@@ -44,6 +48,12 @@ export default {
       .surround(params.slug)
       .fetch()
     return { blog: store.getters['blog/post'], prev, next }
+  },
+
+  data() {
+    return {
+      showScrollTop: false,
+    }
   },
 
   head() {
@@ -76,6 +86,12 @@ export default {
         },
       ],
     }
+  },
+
+  mounted() {
+    window.addEventListener('scroll', () => {
+      this.showScrollTop = window.scrollY > 1000
+    })
   },
 
   methods: {
