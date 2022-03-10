@@ -19,7 +19,7 @@
       <img
         src="./../static/images/profile.jpeg"
         alt="profile"
-        class="md:h-28 md:w-28 h-18 w-18 md:mb-0 mb-2 rounded-full custom-filter p-1 relative"
+        class="md:h-28 md:w-28 h-14 w-14 md:mb-0 mb-2 rounded-full custom-filter p-1 relative"
         width="100px"
         height="100px"
         loading="lazy"
