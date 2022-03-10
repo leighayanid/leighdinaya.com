@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex md:flex-row flex-col-reverse justify-between md:items-center md:my-20 my-10"
+    class="flex md:flex-row flex-col-reverse justify-between md:items-center md:my-20 my-10 relative"
   >
     <lazy-hydrate when-visible>
       <div>
