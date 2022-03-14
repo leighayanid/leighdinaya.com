@@ -1,5 +1,5 @@
 ---
-title: Add a comment system to a Gridsome static website using Cusdis
+title: Add a comment system to a Gridsome/Nuxt.js static website using Cusdis
 published: true
 tags: [blog]
 date: 2022-03-12
@@ -142,28 +142,22 @@ Install the package by runniing `npm install vue-cusdis` or if you're using yarn
 
 Next, from the project folder, look for `Post.vue`, import VueCusdis component and find the div with the class `post-comments` and paste the following code
 
-```javascript
+```js
 <template>
 <Layout>
 ...
-
+<div class="post-comments">
+<!-- paste code here -->
 <vue-cusdis
-
-:attrs="{
-
-host: 'https://cusdis-leigh.vercel.app',
-
-appId: '8b93f5a8-abc3-43be-b135-cbcbad3dce85',
-
-pageId: $page.post.path,
-
-pageTitle: $page.post.title,
-
-pageUrl: $page.post.title,
-
-}"
-
+  :attrs="{
+    host: 'https://cusdis-leigh.vercel.app',
+    appId: '8b93f5a8-abc3-43be-b135-cbcbad3dce85',
+    pageId: $page.post.path,
+    pageTitle: $page.post.title,
+    pageUrl: $page.post.title,
+  }"
 ></vue-cusdis>
+</div>
 ...
 </Layout>
 </template>
@@ -178,12 +172,14 @@ import VueCusdis from "@evillt/vue-cusdis/dist/vue2.es";
 
 Replace the attrs value in vue-cusdis component. These are available on Cusdis project dashboard.
 
+![Image](https://res.cloudinary.com/rentapp/image/upload/v1647166219/Blog_1_lyj19e.png)
+
 ```
 host - domain
 appId - appId given
 
 ```
 
-Now test your code once again by running `gridsome develop`. Click one of the sample blogs. You should be able to see the comment form.
+Now test your code once again by running `gridsome develop`. Click one of the sample blogs. You should be able to see the comment form below the page.
 
 ## Deploy on Netlify
