@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-100 dark:bg-zinc-900 dark:text-slate-50 font-inter transition-all duration-100;
+}
+
+.container {
+  @apply md:my-10 my-5 md:px-32 lg:px-72 py-4 px-8 md:max-w-full xl:max-w-screen-xl mx-auto;
+}
+
+.nuxt-content-highlight {
+  @apply relative;
+}
+
+.nuxt-content-highlight .filename {
+  @apply absolute right-0 text-gray-600 font-light z-10 mr-2 mt-1 text-sm;
+}
+
+.nuxt-content-container a {
+  @apply dark:text-slate-500 text-slate-800 hover:text-blue-600;
+}
+
+p {
+  @apply text-gray-700 dark:text-slate-100;
+}
+
+.nuxt-link-exact-active {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-fuchsia-700;
+}
