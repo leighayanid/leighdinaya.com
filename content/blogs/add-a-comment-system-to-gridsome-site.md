@@ -7,7 +7,7 @@ modified: '2022-03-12'
 featured: true
 ---
 
-In this blog post, you will learn how to easily add a comment system to your Gridsome static website. We will do this using Cusdis, an open-source alternative to Disqus.
+In this blog post, you will learn how to easily add a comment system to your Gridsome static website. We will do this using Cusdis, an open-source, privacy-friendly alternative to Disqus.
 
 You will learn how to host your own version of Cusdis to Vercel, use Railway - a software-as-a-service platform similar to that of Heroku to provision a postgres database. And add a comment section to a static page.
 
@@ -102,7 +102,7 @@ If everything works, we'll then be redirected to success page.
 
 ![https://res.cloudinary.com/rentapp/image/upload/v1647051699/new-project-vercel-cusdis-2_mutdty.png](https://res.cloudinary.com/rentapp/image/upload/v1647051699/new-project-vercel-cusdis-2_mutdty.png)
 
-After the initial deployment is successful, get your production deployment domain, in my case it is https://cusdis-leigh.vercel.app, and then add a new environtment variable in project settings page -> `ENVIRONMENT VARIABLES` tab. Add `NEXTAUTH_URL` environment variable and the obtained domain.
+After the initial deployment is successful, get your production deployment domain. Vercel automatically generated a name for your site, in my case, it is https://cusdis-leigh.vercel.app, and then add a new environtment variable in project settings page -> `ENVIRONMENT VARIABLES` tab. Add `NEXTAUTH_URL` environment variable and the obtained domain.
 
 Your complete environment variables configuration should look like this:
 
@@ -110,7 +110,7 @@ Your complete environment variables configuration should look like this:
 
 Then redeploy your application again.
 
-And that's it. You can now successfully open your newly deployed, self-hosted Cusdis.
+And that's it. You can now successfully open your newly deployed, self-hosted Cusdis via domain Vercel generated for your site.
 
 ## Create a new project in Cusdis
 
@@ -136,30 +136,30 @@ Test the project by running `gridsome develop`. Then visit `localhost:8080`.
 
 One of our goals is to add a comment section to our static blog post page. The section should have the list of all comments and a form for submitting a comment.
 
-The Cusdis SDK includes a comment widget. This widget displays the list of comments and provides a comment form for users. Luckily for us, they also include a Vue.js library. vue-cusdis is a Vue-ported package of Cusdis SDK.
+The Cusdis SDK includes a comment widget. This widget displays the list of comments and provides a comment form for users. Luckily for us, they also provided a Vue-ported library of Cusdis SDK - vue-cusdis.
 
-Install the package by runniing `npm install vue-cusdis` or if you're using yarn `yarn add vue-cusdis`.
+So let's install it to our project. Install the package by running `npm install vue-cusdis` or if you're using yarn `yarn add vue-cusdis`.
 
 Next, from the project folder, look for `Post.vue`, import VueCusdis component and find the div with the class `post-comments` and paste the following code
 
 ```js
 <template>
-<Layout>
-...
-<div class="post-comments">
-<!-- paste code here -->
-<vue-cusdis
-  :attrs="{
-    host: 'https://cusdis-leigh.vercel.app',
-    appId: '8b93f5a8-abc3-43be-b135-cbcbad3dce85',
-    pageId: $page.post.path,
-    pageTitle: $page.post.title,
-    pageUrl: $page.post.title,
-  }"
-></vue-cusdis>
-</div>
-...
-</Layout>
+  <Layout>
+  ...
+  <div class="post-comments">
+  <!-- paste code here -->
+  <vue-cusdis
+    :attrs="{
+      host: 'https://cusdis-leigh.vercel.app',
+      appId: '8b93f5a8-abc3-43be-b135-cbcbad3dce85',
+      pageId: $page.post.path,
+      pageTitle: $page.post.title,
+      pageUrl: $page.post.title,
+    }"
+  ></vue-cusdis>
+  </div>
+  ...
+  </Layout>
 </template>
 
 <script>
@@ -175,11 +175,36 @@ Replace the attrs value in vue-cusdis component. These are available on Cusdis p
 ![Image](https://res.cloudinary.com/rentapp/image/upload/v1647166219/Blog_1_lyj19e.png)
 
 ```
+
 host - domain
 appId - appId given
+
+```
+
+Lastly, we need to add JS SDK to our page. Install Cusdis SDK by overriding Gridsome default `index.html` and add the required script in the index.html file.
+
+Your index.html file should now look like this (do not forget to change domain for the correct value):
+
+```js
+
+<!DOCTYPE html>
+<html ${htmlAttrs}>
+  <head>
+    ${head}
+  </head>
+  <body ${bodyAttrs}>
+  <script async src="https://cusdis-leigh.vercel.app/js/cusdis.es.js"></script>
+    ...
+
+    ${app}
+    ${scripts}
+  </body>
+</html>
 
 ```
 
 Now test your code once again by running `gridsome develop`. Click one of the sample blogs. You should be able to see the comment form below the page.
 
 ## Deploy on Netlify
+
+To deploy it on N

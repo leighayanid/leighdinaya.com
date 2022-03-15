@@ -25,8 +25,8 @@
       <prev-next :prev="prev" :next="next" class="my-5" />
     </article>
 
-    <div class="flex justify-between items-center my-10">
-      <author :tags="blog.tags" class="mx-auto" />
+    <div class="flex my-10">
+      <author :tags="blog.tags" />
     </div>
   </div>
 </template>

@@ -9,7 +9,7 @@
         >
           LEIGH DINAYA
         </h1>
-        <h2 class="font-inter mb-2">
+        <h2 class="font-inter">
           Web developer. Web3 enthusiast. OSS advocate.
         </h2>
       </div>
@@ -19,7 +19,7 @@
       <img
         src="./../static/images/profile.jpeg"
         alt="profile"
-        class="md:h-28 md:w-28 h-14 w-14 md:mb-0 mb-2 rounded-full custom-filter p-1 relative"
+        class="md:h-28 md:w-28 h-20 w-20 md:mb-0 mb-2 rounded-full custom-filter p-1 relative"
         width="100px"
         height="100px"
         loading="lazy"
