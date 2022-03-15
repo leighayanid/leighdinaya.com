@@ -1,5 +1,5 @@
 ---
-title: Add a comment system to a Gridsome/Nuxt.js static website using Cusdis
+title: Add a comment system to a Gridsome static website using Cusdis
 published: true
 tags: [blog]
 date: 2022-03-12
@@ -205,6 +205,4 @@ Your index.html file should now look like this (do not forget to change domain f
 
 Now test your code once again by running `gridsome develop`. Click one of the sample blogs. You should be able to see the comment form below the page.
 
-## Deploy on Netlify
-
-To deploy it on N
+And that's it. You now have a production ready comment system applied to your website.

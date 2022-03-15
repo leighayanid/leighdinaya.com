@@ -8,10 +8,10 @@
         >
         <NuxtLink :to="`/projects/${project.slug}`">
           <div class="flex flex-col">
-            <h2 class="font-inter md:text-2xl text-xl font-bold">
+            <h2 class="font-inter md:text-xl text-lg font-bold">
               {{ project.title }}
             </h2>
-            <p class="text-sm">
+            <p class="text-sm mt-2">
               {{ project.description }}
             </p>
           </div>

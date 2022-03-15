@@ -4,10 +4,10 @@
       <base-card>
         <NuxtLink :to="`/blog/${blog.slug}`">
           <div class="flex flex-col">
-            <h2 class="font-inter md:text-2xl text-xl font-bold">
+            <h2 class="font-inter md:text-xl text-lg font-extrabold">
               {{ blog.title }}
             </h2>
-            <p class="text-sm">{{ formatDate(blog.date) }}</p>
+            <p class="text-sm mt-2">{{ formatDate(blog.date) }}</p>
           </div>
         </NuxtLink>
       </base-card>

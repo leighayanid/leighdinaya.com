@@ -9,9 +9,13 @@
         >
           LEIGH DINAYA
         </h1>
-        <h2 class="font-inter">
+        <h2 class="font-inter font-bold mb-4">
           Web developer. Web3 enthusiast. OSS advocate.
         </h2>
+        <h3 class="md:text-base text-sm">
+          I solve problems and build solutions for the modern web.
+          <br />Working primarily on the <em>Vue.js</em> ecosystem.
+        </h3>
       </div>
     </lazy-hydrate>
 
