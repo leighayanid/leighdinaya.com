@@ -10,7 +10,7 @@
           enter-active-class="animate__animated animate__fadeIn"
           :duration="{ enter: 1000, leave: 200 }"
         >
-          <h3 class="text-xl font-semibold my-5">Featured Blog</h3>
+          <h3 class="text-xl font-semibold my-5">Featured Posts</h3>
         </transition>
       </div>
       <div class="my-2">

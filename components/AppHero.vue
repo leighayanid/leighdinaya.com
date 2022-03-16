@@ -12,9 +12,9 @@
         <h2 class="font-inter font-bold mb-4">
           Web developer. Web3 enthusiast. OSS advocate.
         </h2>
-        <h3 class="md:text-base text-sm md:w-3/4 w-full">
-          I work in <em>Vue.js</em> ecosystem focusing on building SSR, CSR, PWA
-          and statically generated websites.
+        <h3 class="md:text-base text-sm md:w-10/12 w-full">
+          I work in <em>Vue.js</em> ecosystem building progressive, server-side,
+          client-side, and statically generated websites.
         </h3>
       </div>
     </lazy-hydrate>
