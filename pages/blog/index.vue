@@ -3,7 +3,10 @@
     <div class="flex justify-between items-center">
       <h3 class="text-xl font-semibold">Blog</h3>
     </div>
-    <app-search-input class="my-3" @search="search"></app-search-input>
+    <lazy-app-search-input
+      class="my-3"
+      @search="search"
+    ></lazy-app-search-input>
     <base-collapse class="my-5 z-50">
       <div class="btn-group">
         <button
@@ -22,7 +25,7 @@
       <app-tags :tags="tags" class="p-2 md:mt-0 mt-5 rounded-lg" @tag="tag" />
     </base-collapse>
     <div class="my-2">
-      <app-list-blog
+      <lazy-app-list-blog
         :blogs="blogs"
         class="flex-1 grid grid-cols-1 md:gap-6 gap-3"
       />
