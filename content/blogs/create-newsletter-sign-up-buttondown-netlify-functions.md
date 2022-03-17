@@ -6,23 +6,31 @@ date: 2022-03-16
 featured: true
 ---
 
-In my last blog post, I share how to create a comment system to a Gridsome site. Now I'd like to share how to build a newsletter signup form not just for Gridsome but also for Nuxt.js, or basically for any Vue-powered site deployed on Netlify. We'll use Netlify serverless function to send form submissions to Buttondown.
+In my last blog post, I share how to create a comment system to a Gridsome site. Now I'd like to share how to build a newsletter signup form which both works for Gridsome and Nuxt.js, or basically for any Vue-powered site deployed on Netlify. We'll use Netlify serverless function to send form submissions to Buttondown.
+
+Prerequisites
+
+1. Buttondown account and a generated API Key
+2. Netlify CLI installed globally on your machine
+3. Existing Nuxt.js or Gridsome static site already deployed on Netlify
 
 <table-of-content :toc="toc"></table-of-content>
 
 Assuming you have your Gridsome or Nuxt.js static site deployed on Netlify, let's proceed to building our newsletter.
 
-## Sign up for Buttondown account and obtain an API KEY
+## Obtain Buttondown API Key
 
 Log in to [Buttondown](https://buttondown.email) using your account. Click the menu from top right side of the page. From Menu -> go to `Settings` then click `Programming`. This will redirect you to the page where you can find the API key. Copy the API key.
 
-Create .env file in the root project directory and add `BUTTONDOWN_API_KEY`. Set the value to the key you just copied.
+Open your existing Nuxt.js or Gridsome project in VS Code or your preferred text editor. Create .env file in the root project directory. Add `BUTTONDOWN_API_KEY` and set the value to the key you just copied.
 
-Since we're using env file, don't forget to install `dotenv` package by running `npm install --save dotenv`.
+Since we're using env file in our project, don't forget to install `dotenv` package by running `npm install --save dotenv` in your project.
 
 ## Create a serverless function
 
-From the root project folder of your static site, create a new folder `functions`. Inside the functions folder, create a file `buttondown.js`. Copy and paste the following code to the file:
+Now we'll make a Netlify serverless function that will send form submissions containing user's email address to Buttondown. This serverless function will send request via BUTTONDOWN API.
+
+From the root project directory of your static site, create a new folder `functions`. Inside the `functions` folder directory, create a file `buttondown.js`. Copy and paste the following code to the file:
 
 ```javascript
 require('dotenv').config()
@@ -84,7 +92,7 @@ exports.handler = async (event) => {
 
 ## Create a sign up form component
 
-Next, create a sign up form component. From the components folder, create NewsletterForm.vue and paste the following code.
+Next, create a sign up form component. From the `components` folder, create `NewsletterForm.vue` and paste the following code.
 
 ```javascript
 <template>
@@ -111,7 +119,7 @@ Next, create a sign up form component. From the components folder, create Newsle
 
 Make sure to add `ref="form"` attribute in your form.
 
-You can style your form using the CSS framework of your choice, depending on what you use in your project.
+You can style your form using the CSS framework of your choice, depending on what you use in your project. I use Tailwind CSS to design my form.
 
 My component looks like this:
 
@@ -150,9 +158,11 @@ For Tailwind playground reference: https://play.tailwindcss.com/RLuksgDjWV
 
 ## Submitting the form
 
-Now we need to write a method that will trigger the serverless function whenever we submit our form. From the script tag, append the following code:
+Now we need to write a method that will trigger the serverless function whenever we submit our form. Inside the script tag, append the following code:
 
 ```javascript
+
+// NewsletterForm.vue
 
 <script>
 export default {
@@ -225,6 +235,7 @@ Our complete code should now look like this:
             .then((res) => res.json())
             .then((res) => {
               // do whatever you want here
+              alert('Success! Thanks for subscribing!")
             })
         } catch (e) {
           console.log(e)
@@ -238,4 +249,38 @@ Our complete code should now look like this:
 
 And that's it. Our component is now ready. Just import the component to the page where you want it to be placed.
 
+## Deploy on Netlify
+
+Deploying on Netlify is straight forward and I assume you know the process already.
+
+But before we push your code changes to your Git provider, make sure to add `netlify.toml` at the root project directory. This file specifies the path of the folder where you want your functions to be of your site.
+
+```toml
+
+[build]
+  base = "."
+  functions = "./functions"
+  ignore = "git log -1 --pretty=%B | grep dependabot"
+
+[functions]
+  node_bundler = "esbuild"
+
+```
+
+Then push your code to your Git provider and let Netlify redeploy your site.
+
 ## Test locally with Netlify Dev
+
+If you're adding changes to your serverless function, it's always better to test it first before deploying to Netlify. Thanks to Netlify Dev, this is easy to achieve.
+
+Make sure you have Netlify CLI installed on your machine.
+
+To test the function locally, run the command `netlify dev`. It will start a dev server with hot reload on port 8888.
+
+Try submitting an email in the form. If everything is set up correctly, you should see an alert message with the message `Success. Thanks for subscribing!`.
+
+That's it! You now have a working newsletter sign up form thanks to Netlify serverless functions and Buttondown.
+
+If you like this tutorial, consider subscribing to my newsletter. I'm more than happy to write and share new tutorials for you.
+
+Happy coding!

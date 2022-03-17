@@ -1,5 +1,5 @@
 <template>
-  <nav class="dark:bg-zinc-800 bg-zinc-300 p-8 rounded-lg">
+  <nav class="dark:bg-zinc-800 bg-zinc-300 p-8 rounded-lg my-10">
     <p>Table of Contents</p>
     <ul>
       <li
