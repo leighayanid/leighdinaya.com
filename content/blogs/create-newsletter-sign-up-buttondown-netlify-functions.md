@@ -1,26 +1,33 @@
 ---
 title: Create a newsletter sign up form for Gridsome and Nuxt.js static site using Buttondown and Netlify Serverless Functions
 published: true
-tags: [blog]
+tags:
+  - buttondown
+  - netlify
+  - serverless
 date: 2022-03-16
 featured: true
 ---
 
 In my last blog post, I share how to create a comment system to a Gridsome site. Now I'd like to share how to build a newsletter signup form which both works for Gridsome and Nuxt.js, or basically for any Vue-powered site deployed on Netlify. We'll use Netlify serverless function to send form submissions to Buttondown.
 
-Prerequisites
+<table-of-content :toc="toc"></table-of-content>
+
+## Prerequisites
 
 1. Buttondown account and a generated API Key
 2. Netlify CLI installed globally on your machine
 3. Existing Nuxt.js or Gridsome static site already deployed on Netlify
 
-<table-of-content :toc="toc"></table-of-content>
+## Note
 
-Assuming you have your Gridsome or Nuxt.js static site deployed on Netlify, let's proceed to building our newsletter.
+This tutorial is not intended for beginners. I assume you are an experienced developer who are accustomed to concepts and technologies like serverless functions, Node.js, Vue.js and the command line interface. I'm assuming you already know how to use Netlify to set up and deploy websites.
+
+Let's say you've got your existing Gridsome or Nuxt.js static site up and running on Netlify. Let's get started on our newsletter.
 
 ## Obtain Buttondown API Key
 
-Log in to [Buttondown](https://buttondown.email) using your account. Click the menu from top right side of the page. From Menu -> go to `Settings` then click `Programming`. This will redirect you to the page where you can find the API key. Copy the API key.
+First up, log in to [Buttondown](https://buttondown.email) using your account. Click the menu from top right side of the page. From Menu -> go to `Settings` then click `Programming`. This will redirect you to the page where you can find the API key. Copy the API key.
 
 Open your existing Nuxt.js or Gridsome project in VS Code or your preferred text editor. Create .env file in the root project directory. Add `BUTTONDOWN_API_KEY` and set the value to the key you just copied.
 
@@ -279,7 +286,9 @@ To test the function locally, run the command `netlify dev`. It will start a dev
 
 Try submitting an email in the form. If everything is set up correctly, you should see an alert message with the message `Success. Thanks for subscribing!`.
 
-That's it! You now have a working newsletter sign up form thanks to Netlify serverless functions and Buttondown.
+Now open your browser and visit the Buttondown dashboard. You should be able to see a new email subscription in the list of subscribers.
+
+That's it! You now have a working newsletter sign up form up and running using Netlify serverless functions and Buttondown.
 
 If you like this tutorial, consider subscribing to my newsletter. I'm more than happy to write and share new tutorials for you.
 
