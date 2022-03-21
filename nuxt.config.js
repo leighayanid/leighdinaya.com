@@ -74,7 +74,11 @@ export default {
   },
 
   content: {
-    markdown: {},
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-shades-of-purple.css',
+      },
+    },
   },
 
   eslint: { cache: false },
