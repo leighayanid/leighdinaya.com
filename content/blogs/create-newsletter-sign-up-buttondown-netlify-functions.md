@@ -9,7 +9,7 @@ date: 2022-03-16
 featured: true
 ---
 
-In my last blog post, I share how to create a comment system to a Gridsome site. Now I'd like to share how to build a newsletter signup form which both works for Gridsome and Nuxt.js, or basically for any Vue-powered site deployed on Netlify. We'll use Netlify serverless function to send form submissions to Buttondown.
+In my last blog post, I share how to create a comment system for a Gridsome site. Today I'd like to share how to build a newsletter form that works for Gridsome and Nuxt.js, or basically for any Vue-powered site deployed on Netlify. We'll use Netlify serverless function to send form submissions to Buttondown.
 
 <table-of-content :toc="toc"></table-of-content>
 
@@ -21,21 +21,25 @@ In my last blog post, I share how to create a comment system to a Gridsome site.
 
 ## Note
 
-This tutorial is not intended for beginners. I assume you are an experienced developer who are accustomed to concepts and technologies like serverless functions, Node.js, Vue.js and the command line interface. I'm assuming you already know how to use Netlify to set up and deploy websites.
+This tutorial is not for beginners. I assume you are an experienced developer accustomed to concepts and technologies like serverless functions, Node.js, Vue.js, and the command-line interface. I expect you already know how to use Netlify to set up and deploy websites.
 
-Let's say you've got your existing Gridsome or Nuxt.js static site up and running on Netlify. Let's get started on our newsletter.
+Say you've got your existing Gridsome or Nuxt.js static site up and running on Netlify. Let's get started on building our newsletter.
 
 ## Obtain Buttondown API Key
 
-First up, log in to [Buttondown](https://buttondown.email) using your account. Click the menu from top right side of the page. From Menu -> go to `Settings` then click `Programming`. This will redirect you to the page where you can find the API key. Copy the API key.
+First up, log in to [Buttondown](https://buttondown.email) using your account. Click the menu from the top right side of the page. From Menu -> go to Settings and then click `Programming`. It will redirect you to the page where you can find the API key. Copy the API key.
 
-Open your existing Nuxt.js or Gridsome project in VS Code or your preferred text editor. Create .env file in the root project directory. Add `BUTTONDOWN_API_KEY` and set the value to the key you just copied.
+Open your existing Nuxt.js or Gridsome project in VS Code or your preferred text editor. Create a .env file in the root project directory. Add BUTTONDOWN_API_KEY and set the value to the key you just copied.
 
-Since we're using env file in our project, don't forget to install `dotenv` package by running `npm install --save dotenv` in your project.
+Since we're using the env file in our project, don't forget to install the dotenv package by running npm install --save dotenv` from command line in your project.
+
+We also need to declare this variable in our site setting on Netlify. So go ahead and visit Netlify Dashboard and open your site.
+
+In `Site settings > Build & deploy > Environment > Environment variables`, add a new variable `BUTTONDOWN_API_KEY` and set the value to API Key generated from Buttondown.
 
 ## Create a serverless function
 
-Now we'll make a Netlify serverless function that will send form submissions containing user's email address to Buttondown. This serverless function will send request via BUTTONDOWN API.
+Next, we'll make a Netlify serverless function that will send form submissions containing the user's email address to Buttondown. This serverless function will send a request via BUTTONDOWN API.
 
 From the root project directory of your static site, create a new folder `functions`. Inside the `functions` folder directory, create a file `buttondown.js`. Copy and paste the following code to the file:
 
@@ -124,7 +128,7 @@ Next, create a sign up form component. From the `components` folder, create `New
 </script>
 ```
 
-Make sure to add `ref="form"` attribute in your form.
+Make sure to add the `ref="form"` attribute in your form.
 
 You can style your form using the CSS framework of your choice, depending on what you use in your project. I use Tailwind CSS to design my form.
 
@@ -165,7 +169,7 @@ For Tailwind playground reference: https://play.tailwindcss.com/RLuksgDjWV
 
 ## Submitting the form
 
-Now we need to write a method that will trigger the serverless function whenever we submit our form. Inside the script tag, append the following code:
+Next, we need to write a method that triggers the serverless function whenever we submit our form. Inside the script tag, append the following code:
 
 ```javascript
 
@@ -200,7 +204,7 @@ export default {
 
 ```
 
-Next, add the submitForm handler in our form. Don't forget to pass the reference to our form.
+Next, add the submitForm handler in our form.
 
 ```html
 ...
@@ -258,7 +262,7 @@ And that's it. Our component is now ready. Just import the component to the page
 
 ## Deploy on Netlify
 
-Deploying on Netlify is straight forward and I assume you know the process already.
+Deploying on Netlify is straightforward. I assume you know the process already.
 
 But before we push your code changes to your Git provider, make sure to add `netlify.toml` at the root project directory. This file specifies the path of the folder where you want your functions to be of your site.
 
@@ -274,22 +278,22 @@ But before we push your code changes to your Git provider, make sure to add `net
 
 ```
 
-Then push your code to your Git provider and let Netlify redeploy your site.
+Then push your code to your Git provider and let Netlify rebuild and redeploy your site.
 
 ## Test locally with Netlify Dev
 
-If you're adding changes to your serverless function, it's always better to test it first before deploying to Netlify. Thanks to Netlify Dev, this is easy to achieve.
+If you're adding changes to your serverless function, it's always better to test it locally before deploying to Netlify. Thanks to Netlify Dev, this is easy to do. Netlify Dev adds a number of tools to your local development environment, including the ability to test and develop with parts of Netlify's edge logic and routing rules.
 
 Make sure you have Netlify CLI installed on your machine.
 
 To test the function locally, run the command `netlify dev`. It will start a dev server with hot reload on port 8888.
 
-Try submitting an email in the form. If everything is set up correctly, you should see an alert message with the message `Success. Thanks for subscribing!`.
+Try submitting an email address from the form. If everything is set up correctly, you should see an alert message with the message `Success. Thanks for subscribing!`.
 
 Now open your browser and visit the Buttondown dashboard. You should be able to see a new email subscription in the list of subscribers.
 
-That's it! You now have a working newsletter sign up form up and running using Netlify serverless functions and Buttondown.
+That's it! You now have a working newsletter sign up form that is up and running using Netlify serverless functions and Buttondown.
 
-If you like this tutorial, consider subscribing to my newsletter. I'm more than happy to write and share new tutorials for you.
+If you like this tutorial, consider subscribing to my newsletter. I'm more than happy to write and share new tutorials with you.
 
 Happy coding!
