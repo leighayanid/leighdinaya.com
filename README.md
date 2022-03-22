@@ -1,10 +1,8 @@
-# website
+# [WIP] Personal website
 
-A complete rewrite of my portfolio website for the 3rd time. Third time's a charm for me 😆
-
-Fully responsive and production-ready. Built with Nuxt.js, Nuxt Content and hosted on Netlify.
-
-Clean and simple styling with Tailwind CSS.
+A complete rewrite of website for the 3rd time. Third time's a charm for me 😆
+Fully static, responsive and production-ready website built with Nuxt.js, Nuxt Content and hosted on Netlify.
+Styling with Tailwind CSS.
 
 ### light mode 🌞
 
