@@ -4,12 +4,6 @@ date: 2021-02-20
 published: true
 featured: true
 tags: ['analytics']
-series: false
-cover_image: ./images/analytics-cover.jpg
-unsplash_author: Myriam Jessier
-unsplash_link: https://unsplash.com/@mjessier
-logo_image: ./images/analytics-logo.png
-canonical_url: false
 ---
 
 I'm pretty sure you've used Google Analytics before. A free web analytics solution offered by Google. It's the most used analytics software on the web because of its rich and powerful features. But, in case you are not aware, all data collected by Google Analytics is being sent to Google for analysis. If you care about data privacy, it might not be the best solution for you.

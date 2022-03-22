@@ -3,12 +3,6 @@ title: How to use Vue plugins with no SSR support on a Gridsome project
 date: 2021-03-06
 published: true
 tags: ['gridsome']
-series: false
-cover_image: ./images/gridsome-cover.jpg
-unsplash_author: Christopher Gower
-unsplash_link: https://unsplash.com/@cgower
-logo_image: ./images/gridsome-logo.svg
-canonical_url: false
 ---
 
 Ever use a Gridsome plugin that doesn't support SSR? Followed all the instructions on the documentation re how to use the plugin but you still stumble upon errors? Or the plugin works on development but not during build time?

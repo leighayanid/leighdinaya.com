@@ -3,12 +3,6 @@ title: Sharing my Go-to Podcasts
 date: 2020-10-30
 published: true
 tags: ['Learning']
-series: false
-cover_image: ./images/podcast-cover.jpeg
-unsplash_author: Jonathan Velasquez
-unsplash_link: https://unsplash.com/@jonathanvez
-logo_image: ./images/podcast.png
-canonical_url: false
 ---
 
 They say podcasts are not only great for entertainment but also great for education, and I couldn't agree more. I listen to podcasts more often lately, and sure enough, there is a lot of great information out there, especially in the software development world. There are amazing conversations, stories, and helpful insights from the developers.

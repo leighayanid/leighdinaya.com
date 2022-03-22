@@ -4,10 +4,7 @@ date: 2018-12-30
 published: true
 tags: ['Vue.js', 'OSS Libraries']
 series: false
-cover_image: ./images/vue-tools.png
-logo_image: ./images/vue-logo.png
 canonical_url: false
-description: ''
 ---
 
 Vue.js, without a doubt, is one of the best javascript framework in the wild. If you are a new to javascript framework world, Vue is a go to framework because of its easy learning curve compare to that of competitors like React and Angular.

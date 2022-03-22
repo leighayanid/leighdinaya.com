@@ -3,10 +3,6 @@ title: Top Nuxt.js Modules
 date: 2020-09-29
 published: true
 tags: ['Nuxt']
-series: false
-cover_image: ./images/nuxtmodules.png
-logo_image: ./images/nuxt-logo.svg
-canonical_url: false
 ---
 
 For today's blog post, I will list down some of the best Nuxt.js modules built by the Nuxt core team and the Nuxt community. These modules are available on Github.

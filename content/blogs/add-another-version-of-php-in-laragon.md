@@ -4,8 +4,6 @@ date: 2020-09-24
 published: true
 tags: ['Laravel']
 series: false
-cover_image: ./images/laragon-new-php.png
-logo_image: ./images/laravel.png
 canonical_url: false
 ---
 

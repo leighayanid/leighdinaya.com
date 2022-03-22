@@ -4,12 +4,6 @@ date: 2020-11-07
 published: true
 featured: true
 tags: ['Plenti']
-series: false
-cover_image: ./images/plenti-cover.jpg
-unsplash_author: Farzad Nazifi
-unsplash_link: https://unsplash.com/@euwars
-logo_image: ./images/plentico.svg
-canonical_url: false
 ---
 
 I was browsing on Github and came across this static site generator called Plenti. It's a new static site generator based on Svelte and Go.

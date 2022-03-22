@@ -3,11 +3,6 @@ title: My Tech Stack (2020)
 date: 2020-08-04
 published: true
 tags: ['Tech Stack']
-series: false
-cover_image: ./images/tech-stack.png
-logo_image: ./images/web-logo.svg
-canonical_url: false
-description: ''
 ---
 
 I've seen a lot of developers sharing their tech stack on Twitter lately. I am joining the bandwagon. Today, I will share the current tech stack I use when I build my own side projects in 2020. Spoiler: it is Javascript heavy.

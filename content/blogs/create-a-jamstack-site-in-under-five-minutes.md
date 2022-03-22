@@ -4,10 +4,6 @@ date: 2019-12-09
 published: true
 tags: ['Jamstack', 'Stackbit']
 series: false
-cover_image: ./images/stackbit.png
-logo_image: ./images/stackbit-logo.png
-canonical_url: false
-description: 'Did you know you can build and deploy your JAMStack site in less than 5 minutes? Yes, it is possible thanks to Stackbit, an online service that scaffolds a JAMStack website from scratch using different technologies. It uses pre-built themes, different static site generators, connect it to CMS of your choice and then publish your site to Github and Netlify. And it is free to use.'
 ---
 
 Did you know you can build and deploy your JAMStack site in less than 5 minutes? Yes, it is possible thanks to [Stackbit](https://www.stackbit.com), an online service that scaffolds a JAMStack website from scratch using different technologies. It uses pre-built themes, different static site generators, connect it to CMS of your choice and then publish your site to Github and Netlify. And it is free to use.

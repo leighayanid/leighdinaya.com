@@ -3,11 +3,6 @@ title: 5 Vue UI Frameworks for rapid UI development
 date: 2020-07-02
 published: true
 tags: ['Vue', 'UI Libraries']
-series: false
-cover_image: ./images/vue-ui-frameworks.png
-logo_image: ./images/vue-logo.png
-canonical_url: false
-description: ''
 ---
 
 Adding UI frameworks in Vue project is a piece of cake and working with UI component frameworks has such a big impact on developer experience. UI frameworks reduce complexities from building components and save a ton of work and time during product development. In this blog post, I will list down 5 of the best UI frameworks for Vue, their features, and why you as a developer must use them in your next projects.

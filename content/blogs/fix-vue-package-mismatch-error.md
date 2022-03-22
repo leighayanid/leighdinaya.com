@@ -3,12 +3,6 @@ title: Fix Vue package mismatch error
 date: 2021-07-04
 published: true
 tags: ['nuxtjs', 'vercel']
-series: false
-cover_image: ./images/vue-packages-cover.jpg
-unsplash_author: Sigmund
-unsplash_link: https://unsplash.com/@sigmund
-logo_image: ./images/vercel-icon-dark.svg
-canonical_url: false
 ---
 
 I encountered an error in my frontend code today. I thought this was worthy of sharing.

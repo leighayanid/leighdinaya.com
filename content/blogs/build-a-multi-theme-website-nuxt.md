@@ -3,14 +3,7 @@ title: Build a multi-theme website using Nuxt.js, TailwindCSS and DaisyUI
 date: 2021-10-20
 published: true
 featured: true
-
 tags: ['nuxtjs', 'tailwindcss']
-series: false
-cover_image: multi-theme-cover.jpg
-unsplash_author: Tim Arterbury
-unsplash_link: https://unsplash.com/photos/VkwRmha1_tI
-logo_image: ./images/daisy-logo.png
-canonical_url: false
 ---
 
 In this tutorial, you will learn how to create a multiple theme website with Nuxt.js 2, TailwindCSS, and DaisyUI. You will learn how to use and set up DaisyUI in your Nuxt project, how to add multiple themes to your project using DaisyUI's pre-built themes and how to create your own theme.
