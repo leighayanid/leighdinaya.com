@@ -18,7 +18,7 @@
         <nuxt-content
           :document="blog"
           tag="blog"
-          class="prose dark:prose-invert prose-headings:text-purple-500 prose:space-y-5 relative"
+          class="prose dark:prose-invert prose-code:bg-none prose-headings:text-purple-500 prose:space-y-5 relative"
         ></nuxt-content>
         <scroll-to-top v-if="showScrollTop" />
       </div>
