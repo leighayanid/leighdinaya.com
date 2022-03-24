@@ -12,9 +12,14 @@
         <h2 class="font-inter font-bold mb-4">
           Web developer. Web3 enthusiast. OSS advocate.
         </h2>
-        <h3 class="md:text-base text-sm md:w-10/12 w-full">
-          I work in <em>Vue.js</em> ecosystem building progressive, server-side,
-          client-side, and statically generated websites.
+        <h3
+          class="md:text-base text-gray-800 dark:text-white text-sm md:w-10/12 w-full"
+        >
+          I work in <em>Vue.js</em> ecosystem building
+          <strong class="decoration-purple-500">server</strong> and
+          <strong class="decoration-blue-500">client-side</strong> rendered
+          websites, <strong class="decoration-fuchsia-500">JAMStack</strong> and
+          <strong class="decoration-purple-500">progressive</strong> web apps.
         </h3>
       </div>
     </lazy-hydrate>
@@ -44,5 +49,9 @@ export default {
 <style scoped>
 .custom-filter {
   filter: grayscale(90%);
+}
+
+strong {
+  @apply underline decoration-2;
 }
 </style>
