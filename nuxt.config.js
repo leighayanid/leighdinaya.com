@@ -35,6 +35,7 @@ export default {
     '@nuxt/postcss8',
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-analytics',
   ],
   webfontloader: {
     google: {
@@ -98,6 +99,10 @@ export default {
 
   image: {
     // Options
+  },
+
+  googleAnalytics: {
+    id: 'UA-156810526-1',
   },
 
   speedkit: {
