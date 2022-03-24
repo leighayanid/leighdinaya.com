@@ -35,7 +35,7 @@
         <lazy-hydrate>
           <lazy-app-list-project
             :projects="projects"
-            class="flex-1 grid md:grid-cols-2 grid-cols-1 gap-x-6 gap-y-3"
+            class="flex-1 grid md:grid-cols-2 grid-cols-1 gap-6"
           />
         </lazy-hydrate>
       </div>

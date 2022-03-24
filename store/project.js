@@ -27,6 +27,7 @@ export const actions = {
   async fetchFeaturedProjects({ commit }) {
     const projects = await this.$content('projects')
       .where({ featured: { $eq: true } })
+      .limit(4)
       .only(['title', 'description', 'status', 'slug', 'date'])
       .sortBy('date', 'desc')
       .fetch()
