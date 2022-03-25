@@ -1,28 +1,36 @@
 <template>
-  <div class="about space-y-5">
-    <h1 class="text-xl font-semibold dark:text-white text-slate-900">
-      About Me
-    </h1>
-    <h2>
-      I'm Leigh Dinaya. I'm a programmer based in the Philippines. I build
-      websites and applications and I've been coding since 2011.
-    </h2>
-    <h2>
-      Specializing in the following tech: Vue.js, JAMstack, Laravel, Rails,
-      Node.js.
-    </h2>
+  <div class="about">
+    <div class="space-y-5">
+      <h1 class="text-xl font-semibold dark:text-white text-slate-900">
+        About Me
+      </h1>
+      <h2>I'm Leigh Dinaya. a developer from the Philippines.</h2>
+      <h2>
+        Specializing in the Vue.js ecosystem, I'm a frontend developer who is
+        passionate about building performant, cost-efficient websites with the
+        latest technologies.<br />
+        I’m especially focused on the Jamstack and server-rendered/client-side
+        rendered websites.
+      </h2>
+      <h2>
+        I am always refining my skill set to improve my efficiency and workflow.
+        So if you are looking for a front end developer who can help you build
+        projects using Vue.js, feel free to contact me!
+      </h2>
+      <h2>
+        Have a project you would like to discuss?<br />
+        Email me at <strong>leighdinaya@protonmail.com</strong><br />
+      </h2>
+      <h2>Let's build things together.</h2>
+    </div>
+
+    <div class="my-10"><hr /></div>
     <h2>
       Education: <br />
       Bataan Peninsula State University<br />
       Bachelor of Science in Computer Science Major in Software Development<br />
       2011-2016
     </h2>
-    <h2>
-      Have a project you would like to discuss?<br />
-      at leighdinaya@protonmail.com<br />
-      Let's build things together.
-    </h2>
-    <hr />
 
     <h2 class="my-10">Tools I Use to Code and Design</h2>
     <div class="grid md:grid-cols-3 w-full gap-8">
