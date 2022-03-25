@@ -9,8 +9,9 @@
         >
           LEIGH DINAYA
         </h1>
-        <h2 class="font-inter font-bold mb-4">
-          Web developer. Web3 enthusiast. OSS advocate.
+        <h2 class="font-inter font-bold mb-4 opacity-90">
+          Web developer. Web3 enthusiast. OSS advocate. <br />
+          Lifelong learner.
         </h2>
         <h3
           class="md:text-base text-gray-800 dark:text-white text-sm md:w-10/12 w-full"
