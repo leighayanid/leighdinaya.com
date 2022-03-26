@@ -37,6 +37,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-analytics',
   ],
+
   webfontloader: {
     google: {
       families: ['Inter:300,700&display=swap'],

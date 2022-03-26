@@ -25,15 +25,25 @@
       <app-tags :tags="tags" class="p-2 md:mt-0 mt-5 rounded-lg" @tag="tag" />
     </base-collapse>
     <div class="my-2">
-      <lazy-app-list-blog
-        :blogs="blogs"
-        class="flex-1 grid grid-cols-1 md:gap-6 gap-3"
-      />
+      <ul>
+        <li v-for="blog of blogs" :key="blog.slug">
+          <NuxtLink :to="`/blog/${blog.slug}`">
+            <div class="flex flex-col md:px-10 md:py-7 px-0 py-3">
+              <h2 class="font-inter md:text-xl text-lg font-extrabold">
+                {{ blog.title }}
+              </h2>
+              <p class="text-sm mt-2">{{ formatDate(blog.date) }}</p>
+            </div>
+          </NuxtLink>
+          <hr class="my-5" />
+        </li>
+      </ul>
     </div>
   </section>
 </template>
 
 <script>
+import { formatDate } from '~/utils/formatDate'
 export default {
   async asyncData({ params, store }) {
     await store.dispatch('blog/fetchPosts')
@@ -89,6 +99,8 @@ export default {
     tag(tag) {
       this.searchTag = tag
     },
+
+    formatDate,
   },
 }
 </script>
