@@ -10,7 +10,9 @@
           Published on {{ formatDate(blog.createdAt) }} | Last updated:
           {{ formatDate(blog.updatedAt) }}
         </h3>
-        <app-tags :tags="blog.tags" class="mt-5" @tag="tag" />
+        <author :tags="blog.tags" />
+
+        <!-- <app-tags :tags="blog.tags" class="mt-5" @tag="tag" /> -->
       </div>
 
       <div class="relative">
@@ -25,9 +27,7 @@
       <prev-next :prev="prev" :next="next" class="my-5" />
     </article>
 
-    <div class="flex my-10">
-      <author :tags="blog.tags" />
-    </div>
+    <div class="flex my-10"></div>
   </div>
 </template>
 

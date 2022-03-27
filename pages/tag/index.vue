@@ -23,22 +23,16 @@
 import { formatDate } from '~/utils/formatDate'
 export default {
   name: 'Tag',
-  data() {
+  async asyncData({ route, store }) {
+    await store.dispatch('blog/fetchTagPosts', route.query.tag)
+
     return {
-      tag: '',
-      blogs: [],
+      blogs: store.state.blog.tagPosts,
     }
   },
-  mounted() {
-    this.tag = this.$route.query.tag
-    this.searchTag(this.tag)
-  },
+
   methods: {
     formatDate,
-    async searchTag(tag) {
-      await this.$store.dispatch('blog/fetchTagPosts', tag)
-      this.blogs = await this.$store.state.blog.tagPosts
-    },
   },
 }
 </script>

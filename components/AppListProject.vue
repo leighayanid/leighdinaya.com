@@ -2,10 +2,11 @@
   <ul>
     <li v-for="project of projects" :key="project.title">
       <base-card class="relative">
-        <span
-          class="border-violet-500 border px-2 py-0 text-xs rounded-full absolute top-10 left-3/4"
-          >{{ project.status }}</span
-        >
+        <img
+          class="w-full object-cover mb-5 rounded-lg"
+          :src="`/images/${project.img}`"
+          alt="project"
+        />
         <NuxtLink :to="`/projects/${project.slug}`">
           <div class="flex flex-col">
             <h2 class="font-inter md:text-xl text-lg font-bold">
@@ -16,6 +17,10 @@
             </p>
           </div>
         </NuxtLink>
+        <span
+          class="border-violet-500 border px-2 py-0 text-xs rounded-full left-3/4"
+          >{{ project.status }}</span
+        >
       </base-card>
     </li>
   </ul>
