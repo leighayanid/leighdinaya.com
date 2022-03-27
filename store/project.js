@@ -28,8 +28,8 @@ export const actions = {
     const projects = await this.$content('projects')
       .where({ featured: { $eq: true } })
       .limit(4)
-      .only(['title', 'description', 'status', 'slug', 'date', 'img'])
-      .sortBy('date', 'desc')
+      .only(['title', 'description', 'status', 'slug', 'date'])
+      .sortBy('createdAt', 'asc')
       .fetch()
     commit('SET_FEATURED_PROJECTS', projects)
   },

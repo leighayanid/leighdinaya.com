@@ -2,11 +2,6 @@
   <ul>
     <li v-for="project of projects" :key="project.title">
       <base-card class="relative">
-        <img
-          class="w-full object-cover mb-5 rounded-lg"
-          :src="`/images/${project.img}`"
-          alt="project"
-        />
         <NuxtLink :to="`/projects/${project.slug}`">
           <div class="flex flex-col">
             <h2 class="font-inter md:text-xl text-lg font-bold">

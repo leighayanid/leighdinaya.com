@@ -27,7 +27,9 @@
       <prev-next :prev="prev" :next="next" class="my-5" />
     </article>
 
-    <div class="flex my-10"></div>
+    <div class="flex my-10">
+      <app-news-letter />
+    </div>
   </div>
 </template>
 
