@@ -5,6 +5,8 @@ tags:
   - buttondown
   - netlify
   - serverless
+  - nuxtjs
+  - gridsome
 date: 2022-03-16
 featured: true
 ---

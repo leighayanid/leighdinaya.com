@@ -22,7 +22,10 @@
           Oldest
         </button>
       </div>
-      <app-tags :tags="tags" class="p-2 md:mt-0 mt-5 rounded-lg" @tag="tag" />
+      <div class="mt-3">
+        <h3>Tags</h3>
+        <app-tags :tags="tags" class="p-2 md:mt-0 mt-5 rounded-lg" @tag="tag" />
+      </div>
     </base-collapse>
     <div class="my-2">
       <ul>

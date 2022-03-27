@@ -6,12 +6,11 @@
           {{ blog.title }}
         </h1>
 
-        <h2 class="italic">{{ blog.description }}</h2>
-
         <h3 class="text-gray-500 mt-2 text-sm">
           Published on {{ formatDate(blog.createdAt) }} | Last updated:
           {{ formatDate(blog.updatedAt) }}
         </h3>
+        <app-tags :tags="blog.tags" class="mt-5" @tag="tag" />
       </div>
 
       <div class="relative">
@@ -95,6 +94,9 @@ export default {
 
   methods: {
     formatDate,
+    tag(tag) {
+      this.$router.push({ path: '/tag', query: { tag } })
+    },
   },
 }
 </script>

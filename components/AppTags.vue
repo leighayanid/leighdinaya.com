@@ -1,6 +1,5 @@
 <template>
   <div>
-    <p class="mb-2">Tags:</p>
     <button
       v-for="(tag, index) in tags"
       :key="index"

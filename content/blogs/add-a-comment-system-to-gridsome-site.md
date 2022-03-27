@@ -1,7 +1,9 @@
 ---
 title: Add a comment system to a Gridsome static website using Cusdis
 published: true
-tags: [blog]
+tags:
+  - gridsome
+  - cusdis
 date: 2022-03-12
 modified: '2022-03-12'
 featured: true
