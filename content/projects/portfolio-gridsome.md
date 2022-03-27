@@ -8,5 +8,10 @@ featured: true
 project_url: https://supaworkk.vercel.app
 ---
 
-My personal website (version 2.0)
-Powered by Gridsome.
+## About Portfolio v2
+
+This is the second iteration of my portfolio website. It features my most recent web development projects, a page for resources that may be useful to other web developers, and a blog.
+
+All pages were created with Gridsome in an attempt to add performance optimisations. Gridsome is a static site generator powered by VueJS and GraphQL. It dynamically generates pages from your data and is extremely fast.
+
+Unlike my other side projects, I didn't use any CSS framework here, opting instead to do everything from the ground up using SASS and BEM methodology.

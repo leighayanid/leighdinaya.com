@@ -12,13 +12,11 @@ tags:
 project_url: https://supaworkk.vercel.app
 ---
 
-Just another linktr.ee clone.
+## About Socially
 
-Store all your social links in one place. Add your social media links, music playlist links, payment links, blogs etc.
+Socially helps you create a profile for better connecting you with your audience. Create and maintain a list of links that showcase your social feed on all major platforms, including Instagram, Facebook, Twitter, etc. Create an attractive profile to share your links with projects, employers and much more!
 
-Powered by Nuxt.js and Supabase.
-
-Note: This project is still in development.
+Get all your links saved in one place. Make it easy for your audience to find you on social media. Simply share your personalized URL and never lose another follower.
 
 ## App Features
 
