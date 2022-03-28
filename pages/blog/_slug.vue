@@ -2,7 +2,7 @@
   <div class="h-auto">
     <article class="my-5">
       <div class="mx-auto mb-10">
-        <h1 class="md:text-3xl text-2xl font-extrabold mt-5">
+        <h1 class="md:text-2xl text-xl font-extrabold mt-5">
           {{ blog.title }}
         </h1>
 
@@ -11,8 +11,6 @@
           {{ formatDate(blog.updatedAt) }}
         </h3>
         <author :tags="blog.tags" />
-
-        <!-- <app-tags :tags="blog.tags" class="mt-5" @tag="tag" /> -->
       </div>
 
       <div class="relative">

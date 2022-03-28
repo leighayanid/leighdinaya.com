@@ -7,10 +7,10 @@
     />
     <div class="leading-1 items-center">
       <p>Written by Leigh Dinaya</p>
-      <p class="text-sm text-gray-800">
+      <p class="text-sm dark:text-gray-500">
         Front-end developer, writer, and a gym rat.
       </p>
-      <app-tags :tags="tags" class="mb-5 mx-auto" @tag="tag" />
+      <app-tags :tags="tags" class="mt-2 mb-5 mx-auto" @tag="tag" />
     </div>
   </div>
 </template>
