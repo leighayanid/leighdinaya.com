@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-100 dark:bg-zinc-900 dark:text-slate-50 font-inter transition-all duration-100 text-gray-900;
+}
+
+.container {
+  @apply md:my-10 my-5 md:px-32 lg:px-72 py-4 px-8 md:max-w-full xl:max-w-screen-xl mx-auto;
+}
+
+p {
+  @apply text-gray-700 dark:text-slate-100;
+}
+
+.nuxt-link-exact-active {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-fuchsia-700;
+}
