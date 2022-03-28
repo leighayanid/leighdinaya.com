@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="md:text-xl text-lg font-bold">#{{ tag }}</h1>
+    <h1 class="md:text-xl text-lg font-bold">#{{ $route.query.tag }}</h1>
     <div class="my-2">
       <ul>
         <li v-for="blog of blogs" :key="blog.slug">
