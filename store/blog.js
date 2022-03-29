@@ -58,6 +58,7 @@ export const actions = {
   },
 
   async fetchTagPosts({ commit }, tag) {
+    await commit('SET_TAG_POSTS', [])
     const posts = await this.$content('blogs')
       .where({ tags: { $contains: tag } })
       .sortBy('date', 'desc')
