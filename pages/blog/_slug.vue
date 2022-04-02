@@ -33,6 +33,7 @@
 
 <script>
 import { formatDate } from '@/utils/formatDate'
+import Prism from '@/plugins/prism'
 
 export default {
   name: 'Blogslug',
@@ -87,6 +88,7 @@ export default {
   },
 
   mounted() {
+    Prism.highlightAll()
     window.addEventListener('scroll', () => {
       this.showScrollTop = window.scrollY > 1000
     })
