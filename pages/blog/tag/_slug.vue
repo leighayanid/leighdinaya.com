@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="md:text-xl text-lg font-bold">#{{ $route.query.tag }}</h1>
+    <h1 class="md:text-xl text-lg font-bold">#{{ $route.params.slug }}</h1>
     <div class="my-2">
       <ul>
         <li v-for="blog of blogs" :key="blog.slug">
@@ -23,8 +23,8 @@
 import { formatDate } from '~/utils/formatDate'
 export default {
   name: 'Tag',
-  async asyncData({ route, store }) {
-    await store.dispatch('blog/fetchTagPosts', route.query.tag)
+  async asyncData({ store, params }) {
+    await store.dispatch('blog/fetchTagPosts', params.slug)
 
     return {
       blogs: store.state.blog.tagPosts,

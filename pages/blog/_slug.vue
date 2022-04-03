@@ -96,9 +96,6 @@ export default {
 
   methods: {
     formatDate,
-    tag(tag) {
-      this.$router.push({ path: '/tag', query: { tag } })
-    },
   },
 }
 </script>

@@ -32,7 +32,7 @@
       2011-2016
     </h2>
 
-    <h2 class="my-10">Tools I Use to Code and Design</h2>
+    <h2 class="my-10">Tools I Use for Coding and Designing</h2>
     <div class="grid md:grid-cols-3 w-full gap-8">
       <div>
         <h3>Frontend</h3>

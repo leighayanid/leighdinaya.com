@@ -25,10 +25,7 @@ export default {
   },
   methods: {
     tag(tag) {
-      this.$router.push({
-        name: 'tag',
-        query: { tag },
-      })
+      this.$router.push(`/blog/tag/${tag}`)
     },
   },
 }
