@@ -1,6 +1,9 @@
 <template>
   <div>
     <h1 class="md:text-xl text-lg font-bold">#{{ $route.params.slug }}</h1>
+    <h2>
+      {{ blogs.length }} {{ blogs.length > 1 ? 'articles' : 'article' }} found
+    </h2>
     <div class="my-2">
       <ul>
         <li v-for="blog of blogs" :key="blog.slug">
