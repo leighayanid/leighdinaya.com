@@ -7,7 +7,8 @@
         </h1>
 
         <h3 class="text-gray-500 mt-2 text-sm">
-          Published on {{ formatDate(blog.createdAt) }} | Last updated:
+          {{ formatTimeToRead(blog.readingTime) }}. Published on
+          {{ formatDate(blog.createdAt) }}. Last updated:
           {{ formatDate(blog.updatedAt) }}
         </h3>
         <author :tags="blog.tags" />
@@ -46,6 +47,7 @@ export default {
       .sortBy('createdAt', 'asc')
       .surround(params.slug)
       .fetch()
+
     return { blog: store.getters['blog/post'], prev, next }
   },
 
@@ -65,7 +67,7 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: `https://my-site.com/${this.blog.image}`,
+          content: `https://leighdinaya.com/${this.blog.image}`,
         },
         // Twitter Card
         {
@@ -81,7 +83,7 @@ export default {
         {
           hid: 'twitter:image',
           name: 'twitter:image',
-          content: `https://my-site.com/${this.blog.image}`,
+          content: `https://leighdinaya.com/${this.blog.image}`,
         },
       ],
     }
@@ -96,6 +98,11 @@ export default {
 
   methods: {
     formatDate,
+    formatTimeToRead(milliseconds) {
+      const totalSeconds = milliseconds / 1000
+      const minutes = Math.floor(totalSeconds / 60)
+      return `${minutes} minute read`
+    },
   },
 }
 </script>

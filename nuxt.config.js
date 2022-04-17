@@ -83,10 +83,20 @@ export default {
     },
   },
 
+  hooks: {
+    'content:file:beforeInsert': (document) => {
+      if (document.extension === '.md') {
+        const { time } = require('reading-time')(document.text)
+
+        document.readingTime = time
+      }
+    },
+  },
+
   eslint: { cache: false },
 
   sitemap: {
-    hostname: process.env.BASE_URL || 'https://testwebsite3leigh.netlify.app',
+    hostname: process.env.BASE_URL || 'https://leighdinaya.com',
     routes() {
       return getRoutes()
     },
