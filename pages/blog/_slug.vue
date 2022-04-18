@@ -7,10 +7,11 @@
         </h1>
 
         <h3 class="text-gray-500 mt-2 text-sm">
-          {{ formatTimeToRead(blog.readingTime) }}. Published on
+          {{ blog.readingTime.text }}. Published on
           {{ formatDate(blog.createdAt) }}. Last updated:
           {{ formatDate(blog.updatedAt) }}
         </h3>
+        <div>{{ stats }}</div>
         <author :tags="blog.tags" />
       </div>
 
@@ -98,11 +99,6 @@ export default {
 
   methods: {
     formatDate,
-    formatTimeToRead(milliseconds) {
-      const totalSeconds = milliseconds / 1000
-      const minutes = Math.floor(totalSeconds / 60)
-      return `${minutes} minute read`
-    },
   },
 }
 </script>

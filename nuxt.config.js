@@ -1,3 +1,4 @@
+import readingTime from 'reading-time'
 import getRoutes from './utils/getRoutes'
 
 export default {
@@ -86,9 +87,7 @@ export default {
   hooks: {
     'content:file:beforeInsert': (document) => {
       if (document.extension === '.md') {
-        const { time } = require('reading-time')(document.text)
-
-        document.readingTime = time
+        document.readingTime = readingTime(document.text)
       }
     },
   },
