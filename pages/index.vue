@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
     <lazy-base-gradient-background class="relative" />
     <lazy-app-hero class="hero" />
 
@@ -95,9 +95,7 @@ export default {
 </script>
 
 <style scoped>
-.blog,
-.hero,
-.projects {
+.home {
   content-visibility: auto;
 }
 </style>
