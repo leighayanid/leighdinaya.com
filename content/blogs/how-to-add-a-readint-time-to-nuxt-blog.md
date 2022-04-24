@@ -5,7 +5,6 @@ tags:
   - nuxtjs
 date: 2022-04-18
 modified: 2022-04-18
-featured: false
 ---
 
 One of the things I've learned while building an earlier version of my personal portfolio and blogging site was to add a reading time to a written article. It's critical to let readers know how much time they'll be spending reading the content. Adding the estimated read time can increase the content engagement. The more time they spend reading, the more likely they are to engage with the content.
