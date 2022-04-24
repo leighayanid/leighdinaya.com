@@ -96,7 +96,8 @@ export default {
 
 <style scoped>
 .blog,
-.hero {
+.hero,
+.projects {
   content-visibility: auto;
 }
 </style>
