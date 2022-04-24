@@ -2,7 +2,7 @@
   <div class="h-auto">
     <article class="my-5">
       <div class="mx-auto mb-10">
-        <h1 class="md:text-2xl text-xl font-extrabold mt-5">
+        <h1 class="md:text-2xl text-xl font-extrabold mt-5 text-purple-500">
           {{ blog.title }}
         </h1>
 
@@ -11,7 +11,6 @@
           {{ formatDate(blog.createdAt) }}. Last updated:
           {{ formatDate(blog.updatedAt) }}
         </h3>
-        <div>{{ stats }}</div>
         <author :tags="blog.tags" />
       </div>
 

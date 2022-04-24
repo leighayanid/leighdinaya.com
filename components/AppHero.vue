@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex md:flex-row flex-col-reverse justify-between items-start md:items-center md:my-20 my-10 relative"
+    class="flex md:flex-row flex-col-reverse justify-between items-start md:items-center md:my-16 my-10 relative"
   >
     <lazy-hydrate when-visible>
       <div>
@@ -19,7 +19,7 @@
           I work in <em>Vue.js</em> ecosystem building
           <strong class="decoration-purple-500">server</strong> and
           <strong class="decoration-blue-500">client-side</strong> rendered
-          websites, <strong class="decoration-fuchsia-500">JAMStack</strong> and
+          websites, <strong class="decoration-fuchsia-500">Jamstack</strong> and
           <strong class="decoration-purple-500">progressive</strong> web apps.
         </h3>
       </div>
