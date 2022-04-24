@@ -1,7 +1,7 @@
 <template>
   <div>
     <lazy-base-gradient-background class="relative" />
-    <lazy-app-hero />
+    <lazy-app-hero class="hero" />
 
     <section class="blog">
       <div class="flex justify-between items-center">
@@ -93,3 +93,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.blog,
+.hero {
+  content-visibility: auto;
+}
+</style>
