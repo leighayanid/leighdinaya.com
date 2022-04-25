@@ -1,8 +1,8 @@
-# [WIP] Personal website
+# Personal website
 
 As they say, "third time's a charm." A complete rewrite of my personal website for the third time.
 
-Fully static, responsive website built with Nuxt.js, Nuxt Content and hosted on Netlify.
+Fully static, minimalist, responsive website built with Nuxt.js, Nuxt Content and hosted on Netlify.
 
 Styling with Tailwind CSS.
 
