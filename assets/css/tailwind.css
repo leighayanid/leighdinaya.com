@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-3500 {
+    animation-delay: 3.5s;
+  }
+}
+
 body {
   @apply bg-slate-100 dark:bg-zinc-900 dark:text-slate-50 font-inter transition-all duration-100 text-gray-900;
 }
