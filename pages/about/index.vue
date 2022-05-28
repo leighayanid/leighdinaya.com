@@ -19,7 +19,7 @@
       </h2>
       <h2>
         Have a project you would like to discuss?<br />
-        Email me at <strong>leighdinaya@protonmail.com</strong><br />
+        Email me at <strong>leighdinaya@proton.me</strong><br />
       </h2>
       <h2>Let's build things together.</h2>
     </div>

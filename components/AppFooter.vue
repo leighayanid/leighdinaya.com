@@ -16,7 +16,7 @@
       </div>
       <div class="social flex flex-col md:mt-0 mt-3 space-y-2">
         <h1 class="font-semibold">Say Hi!</h1>
-        <p>leighdinaya@protonmail.com</p>
+        <p>leighdinaya@proton.me</p>
         <p>+639266781390</p>
       </div>
     </div>
