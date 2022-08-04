@@ -5,11 +5,13 @@
     <lazy-hydrate when-visible>
       <div>
         <h1
-          class="mb-2 md:text-5xl font-inter tracking-wide text-5xl font-extrabold pb-3 dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-blue-400 to-fuchsia-800 sm:pb-5"
+          class="mb-2 md:text-5xl font-inter tracking-wide text-3xl font-extrabold pb-3 dark:bg-clip-text dark:text-transparent dark:bg-gradient-to-r from-blue-400 to-fuchsia-800 sm:pb-5"
         >
           LEIGH DINAYA
         </h1>
-        <h2 class="font-inter font-extrabold text-lg mb-4 opacity-90">
+        <h2
+          class="font-inter font-extrabold md:text-lg text-md mb-4 opacity-90"
+        >
           Web developer. Web3 enthusiast. OSS advocate. <br />
           Lifelong learner.
         </h2>
