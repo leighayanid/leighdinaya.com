@@ -78,7 +78,7 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content: `https://leighdinaya.com/${this.blog.image}`,
+          content: `https://leighdinaya.com/${this.blog.cover_img}`,
         },
         // Twitter Card
         {
@@ -94,7 +94,7 @@ export default {
         {
           hid: 'twitter:image',
           name: 'twitter:image',
-          content: `https://leighdinaya.com/${this.blog.image}`,
+          content: `https://leighdinaya.com/${this.blog.cover_img}`,
         },
       ],
     }

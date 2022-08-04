@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center text-sm uppercase">
+  <div class="flex items-center text-sm font-semibold uppercase">
     <nuxt-link to="/blog" class="py-1 px-3">Blog</nuxt-link>
     <nuxt-link to="/projects" class="py-1 px-3">Projects</nuxt-link>
     <nuxt-link to="/bookmarks" class="py-1 px-3">Bookmarks</nuxt-link>
