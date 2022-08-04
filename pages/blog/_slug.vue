@@ -72,15 +72,18 @@ export default {
     return {
       title: this.blog.title,
       meta: [
-        // Open Graph
         { hid: 'og:title', property: 'og:title', content: this.blog.title },
         { hid: 'og:type', property: 'og:type', content: 'blog' },
         {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.blog.description,
+        },
+        {
           hid: 'og:image',
           property: 'og:image',
-          content: `https://leighdinaya.com/${this.blog.cover_img}`,
+          content: this.blog.cover_img,
         },
-        // Twitter Card
         {
           hid: 'twitter:title',
           name: 'twitter:title',
@@ -94,7 +97,7 @@ export default {
         {
           hid: 'twitter:image',
           name: 'twitter:image',
-          content: `https://leighdinaya.com/${this.blog.cover_img}`,
+          content: this.blog.cover_img,
         },
       ],
     }

@@ -61,7 +61,7 @@ export default {
       name: "Leigh's Website",
       short_name: "Leigh's Website",
       lang: 'en',
-      description: 'Leigh Dinaya Website',
+      description: 'Leigh Dinaya | Web Developer - Tech Enthusiast',
       background_color: '#fafafa',
       theme_color: '#fafafa',
       display: 'standalone',

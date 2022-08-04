@@ -1,5 +1,6 @@
 ---
 title: Configure Eslint, Prettier, Commitlint, Husky and lint-staged for Nuxt 3
+description: Learn how to configure Eslint, Prettier, Commitlint, Husky and lint-staged for Nuxt 3 project
 published: true
 cover_img: banner.png
 tags:
