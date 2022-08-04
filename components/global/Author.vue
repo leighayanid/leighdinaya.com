@@ -6,7 +6,7 @@
       loading="lazy"
     />
     <div class="leading-1 items-center">
-      <p class="text-gray-900 font-medium">Written by Leigh Dinaya</p>
+      <p class="text-gray-900 font-medium">by Leigh Dinaya</p>
       <p class="text-sm dark:text-gray-500">
         Leigh is a passionate web developer who loves to make things work. He
         likes to build products that solve user's problems.

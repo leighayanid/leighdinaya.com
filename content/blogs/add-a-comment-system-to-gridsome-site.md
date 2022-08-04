@@ -1,6 +1,7 @@
 ---
 title: Add a comment system to a Gridsome static website using Cusdis
 published: true
+cover_img: gridsome-cusdis.png
 tags:
   - gridsome
   - cusdis

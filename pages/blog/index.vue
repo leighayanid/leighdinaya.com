@@ -16,7 +16,7 @@
           Latest
         </button>
         <button
-          class="border px-2 py-1 text-sm import CollapseComp from '~/components/base/CollapseComp.vue' rounded-full"
+          class="border px-2 py-1 text-sm rounded-full"
           @click="sortBy('asc')"
         >
           Oldest
@@ -30,7 +30,16 @@
     <div class="my-2">
       <ul>
         <li v-for="blog of blogs" :key="blog.slug">
-          <NuxtLink :to="`/blog/${blog.slug}`">
+          <NuxtLink
+            :to="`/blog/${blog.slug}`"
+            class="flex md:flex-row flex-col hover:bg-none"
+          >
+            <img
+              v-if="blog.cover_img"
+              :src="`/images/` + blog.cover_img"
+              class="md:w-2/4 md:h-3/4 lg:w-1/2 w-full rounded-xl"
+              loading="lazy"
+            />
             <div class="flex flex-col md:px-10 md:py-7 px-0 py-3">
               <h2 class="font-inter md:text-xl text-lg font-extrabold">
                 {{ blog.title }}

@@ -2,7 +2,7 @@
   <div class="dark:bg-neutral-900 bg-slate-200 rounded-lg p-10">
     <div class="flex flex-col">
       <div class="flex-1">
-        <h2 class="text-xl font-bold">Sign up for our newsletter</h2>
+        <h2 class="text-xl font-bold">Sign up for newsletter</h2>
         <p class="text-sm">
           Get emails from me about web development, tech, and early access to
           new articles. I also share pictures of my dogs.

@@ -1,6 +1,7 @@
 ---
 title: Adding estimated reading time with Nuxt Content
 published: true
+cover_img: reading-time-nuxt-content.png
 tags:
   - nuxtjs
 date: 2022-04-18

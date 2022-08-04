@@ -2,7 +2,7 @@
   <button
     role="button"
     aria-label="Toggle dark/light"
-    class="toggle-theme"
+    class="toggle-theme hover:dark:bg-zinc-500 hover:bg-purple-200 rounded-full p-2 transition-colors"
     @click.prevent="toggleTheme"
   >
     <svg

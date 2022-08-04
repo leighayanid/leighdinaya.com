@@ -1,38 +1,49 @@
 <template>
-  <div class="h-auto">
-    <article class="my-5">
-      <div class="mx-auto mb-10">
-        <h1 class="md:text-2xl text-xl font-extrabold mt-5 text-purple-500">
-          {{ blog.title }}
-        </h1>
+  <div>
+    <div
+      class="progress-bar fixed top-0 left-0 w-full h-1 dark:bg-slate-300 bg-purple-500 z-50"
+    ></div>
+    <div class="h-auto">
+      <article class="my-5">
+        <div class="mx-auto mb-10">
+          <h1 class="md:text-2xl text-xl font-extrabold mb-5 text-purple-500">
+            {{ blog.title }}
+          </h1>
+          <h3 class="text-gray-500 mb-10 text-sm">
+            {{ blog.readingTime.text }}. Published on
+            {{ formatDate(blog.createdAt) }}. Last updated:
+            {{ formatDate(blog.updatedAt) }}
+          </h3>
+          <img
+            :src="`/images/` + blog.cover_img"
+            alt="banner"
+            class="rounded-xl"
+          />
 
-        <h3 class="text-gray-500 mt-2 text-sm">
-          {{ blog.readingTime.text }}. Published on
-          {{ formatDate(blog.createdAt) }}. Last updated:
-          {{ formatDate(blog.updatedAt) }}
-        </h3>
-        <author :tags="blog.tags" />
+          <author :tags="blog.tags" />
+        </div>
+
+        <div class="relative">
+          <nuxt-content
+            :document="blog"
+            tag="blog"
+            class="prose leading-loose dark:prose-invert prose-code:bg-none prose-headings:text-purple-500 prose:space-y-5 relative"
+          ></nuxt-content>
+          <scroll-to-top v-if="showScrollTop" />
+        </div>
+
+        <prev-next :prev="prev" :next="next" class="my-5" />
+      </article>
+
+      <div class="flex my-10">
+        <app-news-letter />
       </div>
-
-      <div class="relative">
-        <nuxt-content
-          :document="blog"
-          tag="blog"
-          class="prose dark:prose-invert prose-code:bg-none prose-headings:text-purple-500 prose:space-y-5 relative"
-        ></nuxt-content>
-        <scroll-to-top v-if="showScrollTop" />
-      </div>
-
-      <prev-next :prev="prev" :next="next" class="my-5" />
-    </article>
-
-    <div class="flex my-10">
-      <app-news-letter />
     </div>
   </div>
 </template>
 
 <script>
+import { scroll, animate } from 'motion'
 import { formatDate } from '@/utils/formatDate'
 import Prism from '@/plugins/prism'
 
@@ -91,9 +102,12 @@ export default {
 
   mounted() {
     Prism.highlightAll()
+
     window.addEventListener('scroll', () => {
       this.showScrollTop = window.scrollY > 1000
     })
+
+    scroll(animate('.progress-bar', { scaleX: [0, 1] }))
   },
 
   methods: {

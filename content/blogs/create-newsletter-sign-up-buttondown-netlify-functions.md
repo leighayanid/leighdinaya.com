@@ -1,5 +1,6 @@
 ---
 title: Create a newsletter sign up form for Gridsome and Nuxt.js static site using Buttondown and Netlify Serverless Functions
+cover_img: gridsome-newsletter-buttondown.png
 published: true
 tags:
   - buttondown

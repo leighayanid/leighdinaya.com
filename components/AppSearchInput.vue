@@ -3,8 +3,8 @@
     <input
       type="search"
       autocomplete="off"
-      placeholder="Search Notes"
-      class="px-3 py-2 rounded-lg text-sm text-slate-800 border-1 border relative w-full"
+      placeholder="Search Blog Posts"
+      class="px-3 py-2 rounded-full text-sm text-slate-800 border-1 border relative w-full"
       data-username
       @input="debounceSearch"
       @change="search"

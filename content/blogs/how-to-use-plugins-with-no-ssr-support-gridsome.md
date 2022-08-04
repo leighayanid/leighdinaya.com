@@ -1,7 +1,7 @@
 ---
 title: How to use Vue plugins with no SSR support on a Gridsome project
 date: 2021-03-06
-published: true
+published: false
 tags: ['gridsome']
 ---
 

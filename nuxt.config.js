@@ -108,7 +108,7 @@ export default {
   },
 
   image: {
-    // Options
+    provider: 'static',
   },
 
   googleAnalytics: {

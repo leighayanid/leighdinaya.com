@@ -1,25 +1,9 @@
 <template>
-  <div class="flex items-center text-md">
-    <nuxt-link
-      to="/blog"
-      class="hover:bg-zinc-500 hover:text-white px-3 py-2 rounded-md transition-colors duration-100 delay-100"
-      >Blog</nuxt-link
-    >
-    <nuxt-link
-      to="/projects"
-      class="hover:bg-zinc-500 hover:text-white px-3 py-2 rounded-md transition-colors duration-100 delay-100"
-      >Projects</nuxt-link
-    >
-    <nuxt-link
-      to="/bookmarks"
-      class="hover:bg-zinc-500 hover:text-white px-3 py-2 rounded-md transition-colors duration-100 delay-100"
-      >Bookmarks</nuxt-link
-    >
-    <nuxt-link
-      to="/about"
-      class="hover:bg-zinc-500 hover:text-white px-3 py-2 rounded-md transition-colors duration-100 delay-100"
-      >About</nuxt-link
-    >
+  <div class="flex items-center text-sm uppercase">
+    <nuxt-link to="/blog" class="py-1 px-3">Blog</nuxt-link>
+    <nuxt-link to="/projects" class="py-1 px-3">Projects</nuxt-link>
+    <nuxt-link to="/bookmarks" class="py-1 px-3">Bookmarks</nuxt-link>
+    <nuxt-link to="/about" class="py-1 px-3">About</nuxt-link>
   </div>
 </template>
 

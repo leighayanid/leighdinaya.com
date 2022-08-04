@@ -12,7 +12,7 @@
 }
 
 body {
-  @apply bg-slate-100 dark:bg-zinc-900 dark:text-slate-50 font-inter transition-all duration-100 text-gray-900;
+  @apply bg-purple-50 dark:bg-zinc-900 dark:text-slate-50 font-inter transition-all duration-100 text-gray-800 tracking-normal;
 }
 
 .container {
@@ -24,5 +24,5 @@ p {
 }
 
 .nuxt-link-exact-active {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-fuchsia-700;
+  @apply bg-opacity-50 bg-gradient-to-r from-blue-400 to-fuchsia-700 rounded-full py-1 px-3;
 }
